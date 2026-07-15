@@ -1,0 +1,78 @@
+[
+    {
+        "timestamp": "00:00",
+        "text": "In this section of the course, we’re going to explore how Google Compute Engine works with a focus on virtual networking."
+    },
+    {
+        "timestamp": "00:07",
+        "text": "Many users start with Google Cloud by defining their own virtual private cloud inside their first Google Cloud project or by starting with the default virtual private cloud."
+    },
+    {
+        "timestamp": "00:17",
+        "text": "So, what is a virtual private cloud?"
+    },
+    {
+        "timestamp": "00:21",
+        "text": "A virtual private cloud, or VPC, is a secure, individual, private cloud-computing model hosted within a public cloud – like Google Cloud!"
+    },
+    {
+        "timestamp": "00:32",
+        "text": "On a VPC, customers can run code, store data, host websites, and do anything else they could"
+    },
+    {
+        "timestamp": "00:38",
+        "text": "do in an ordinary private cloud, but this private cloud is hosted remotely by a public cloud provider."
+    },
+    {
+        "timestamp": "00:46",
+        "text": "This means that VPCs combine the scalability and convenience of public cloud computing with the data isolation of private cloud computing."
+    },
+    {
+        "timestamp": "00:58",
+        "text": "VPC networks connect Google Cloud resources to each other and to the internet."
+    },
+    {
+        "timestamp": "01:02",
+        "text": "This includes segmenting networks, using firewall rules to restrict access to instances, and creating static routes to forward traffic to specific destinations."
+    },
+    {
+        "timestamp": "01:13",
+        "text": "Here's something that tends to surprise a lot of new Google Cloud users: Google VPC networks are global."
+    },
+    {
+        "timestamp": "01:21",
+        "text": "They can also have subnets, which is a segmented piece of the larger network, in any Google Cloud region worldwide."
+    },
+    {
+        "timestamp": "01:29",
+        "text": "Subnets can span the zones that make up a region."
+    },
+    {
+        "timestamp": "01:32",
+        "text": "This architecture makes it easy to define network layouts with global scope."
+    },
+    {
+        "timestamp": "01:37",
+        "text": "Resources can even be in different zones on the same subnet."
+    },
+    {
+        "timestamp": "01:42",
+        "text": "The size of a subnet can be increased by expanding the range of IP addresses allocated to it, and doing so won’t affect virtual machines that are already configured."
+    },
+    {
+        "timestamp": "01:51",
+        "text": "For example, let’s take a VPC network named vpc1 that has two subnets defined in the asia-east1 and us-east1 regions."
+    },
+    {
+        "timestamp": "02:04",
+        "text": "If the VPC has three Compute Engine VMs attached to it, it means they’re neighbors on the same subnet even though they’re in different zones."
+    },
+    {
+        "timestamp": "02:12",
+        "text": "This capability can be used to build solutions that are resilient to disruptions yet retain a simple network layout."
+    },
+    {
+        "timestamp": "00:00",
+        "text": "In this section of the course, we’re going to explore how Google Compute Engine works with a focus on virtual networking. 00:07 Many users start with Google Cloud by defining their own virtual private cloud inside their first Google Cloud project or by starting with the default virtual private cloud. 00:17 So, what is a virtual private cloud? 00:21 A virtual private cloud, or VPC, is a secure, individual, private cloud-computing model hosted within a public cloud – like Google Cloud! 00:32 On a VPC, customers can run code, store data, host websites, and do anything else they could 00:38 do in an ordinary private cloud, but this private cloud is hosted remotely by a public cloud provider. 00:46 This means that VPCs combine the scalability and convenience of public cloud computing with the data isolation of private cloud computing. 00:58 VPC networks connect Google Cloud resources to each other and to the internet. 01:02 This includes segmenting networks, using firewall rules to restrict access to instances, and creating static routes to forward traffic to specific destinations. 01:13 Here's something that tends to surprise a lot of new Google Cloud users: Google VPC networks are global. 01:21 They can also have subnets, which is a segmented piece of the larger network, in any Google Cloud region worldwide. 01:29 Subnets can span the zones that make up a region. 01:32 This architecture makes it easy to define network layouts with global scope. 01:37 Resources can even be in different zones on the same subnet. 01:42 The size of a subnet can be increased by expanding the range of IP addresses allocated to it, and doing so won’t affect virtual machines that are already configured. 01:51 For example, let’s take a VPC network named vpc1 that has two subnets defined in the asia-east1 and us-east1 regions. 02:04 If the VPC has three Compute Engine VMs attached to it, it means they’re neighbors on the same subnet even though they’re in different zones. 02:12 This capability can be used to build solutions that are resilient to disruptions yet retain a simple network layout."
+    }
+]

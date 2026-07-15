@@ -1,0 +1,110 @@
+[
+    {
+        "timestamp": "00:00",
+        "text": "So now that we have a basic understanding of containers and Kubernetes, let’s talk about Google Kubernetes Engine, or GKE."
+    },
+    {
+        "timestamp": "00:08",
+        "text": "GKE is a Google-hosted managed Kubernetes service in the cloud."
+    },
+    {
+        "timestamp": "00:12",
+        "text": "The GKE environment consists of multiple machines, specifically Compute Engine instances, grouped together to form a cluster."
+    },
+    {
+        "timestamp": "00:21",
+        "text": "You can create a Kubernetes cluster with GKE, but how is GKE different from Kubernetes?"
+    },
+    {
+        "timestamp": "00:27",
+        "text": "From the user’s perspective, it’s a lot simpler."
+    },
+    {
+        "timestamp": "00:30",
+        "text": "GKE manages all the control plane components for us."
+    },
+    {
+        "timestamp": "00:34",
+        "text": "It still exposes an IP address to which we send all of our Kubernetes API"
+    },
+    {
+        "timestamp": "00:38",
+        "text": "requests, but GKE is responsible for provisioning and managing all the control plane infrastructure behind it."
+    },
+    {
+        "timestamp": "00:45",
+        "text": "It also eliminates the need for a separate control plane."
+    },
+    {
+        "timestamp": "00:49",
+        "text": "Node configuration and management depends on the type of GKE mode you use."
+    },
+    {
+        "timestamp": "00:54",
+        "text": "With the Autopilot mode, which is recommended, GKE manages the underlying infrastructure such as node configuration, autoscaling, auto- upgrades, baseline security configurations, and baseline networking configuration."
+    },
+    {
+        "timestamp": "01:09",
+        "text": "With the Standard mode, you manage the underlying infrastructure, including configuring the individual nodes."
+    },
+    {
+        "timestamp": "01:16",
+        "text": "Let’s examine the benefits and functionality of Autopilot in more detail."
+    },
+    {
+        "timestamp": "01:21",
+        "text": "Autopilot is optimized for production."
+    },
+    {
+        "timestamp": "01:24",
+        "text": "Autopilot helps produce a strong security posture."
+    },
+    {
+        "timestamp": "01:28",
+        "text": "And Autopilot also promotes operational efficiency."
+    },
+    {
+        "timestamp": "01:32",
+        "text": "The GKE Standard mode has the same functionality as Autopilot, but you’re responsible for the configuration, management, and optimization of the cluster."
+    },
+    {
+        "timestamp": "01:41",
+        "text": "Unless you require the specific level of configuration control offered by GKE standard, it’s recommended that you use Autopilot mode."
+    },
+    {
+        "timestamp": "01:50",
+        "text": "You can create a Kubernetes cluster with GKE by using the Google Cloud console or the gcloud command that's provided by the Cloud software development kit."
+    },
+    {
+        "timestamp": "02:00",
+        "text": "GKE clusters can be customized, and they support different machine types, number of nodes, and network settings."
+    },
+    {
+        "timestamp": "02:07",
+        "text": "Kubernetes provides the mechanisms through which you interact with your cluster."
+    },
+    {
+        "timestamp": "02:12",
+        "text": "Kubernetes commands and resources are used to deploy and manage applications, perform administration tasks, set policies, and monitor the health of deployed workloads."
+    },
+    {
+        "timestamp": "02:23",
+        "text": "Running a GKE cluster comes with the benefit of advanced cluster management features that Google Cloud provides."
+    },
+    {
+        "timestamp": "02:30",
+        "text": "These include Google Cloud's load-balancing for Compute Engine instances; Node pools to designate subsets of nodes within a cluster for additional flexibility; Automatic scaling of your cluster's node instance"
+    },
+    {
+        "timestamp": "02:41",
+        "text": "count; Automatic upgrades for your cluster's node software; Node auto-repair to maintain node health and availability; And logging and monitoring with Google Cloud Observability for visibility into your cluster."
+    },
+    {
+        "timestamp": "02:56",
+        "text": "To start up Kubernetes on a cluster in GKE, all you do is run this command: gcloud container clusters create-auto k1 --region, specifying the cluster region."
+    },
+    {
+        "timestamp": "00:00",
+        "text": "So now that we have a basic understanding of containers and Kubernetes, let’s talk about Google Kubernetes Engine, or GKE. 00:08 GKE is a Google-hosted managed Kubernetes service in the cloud. 00:12 The GKE environment consists of multiple machines, specifically Compute Engine instances, grouped together to form a cluster. 00:21 You can create a Kubernetes cluster with GKE, but how is GKE different from Kubernetes? 00:27 From the user’s perspective, it’s a lot simpler. 00:30 GKE manages all the control plane components for us. 00:34 It still exposes an IP address to which we send all of our Kubernetes API 00:38 requests, but GKE is responsible for provisioning and managing all the control plane infrastructure behind it. 00:45 It also eliminates the need for a separate control plane. 00:49 Node configuration and management depends on the type of GKE mode you use. 00:54 With the Autopilot mode, which is recommended, GKE manages the underlying infrastructure such as node configuration, autoscaling, auto- upgrades, baseline security configurations, and baseline networking configuration. 01:09 With the Standard mode, you manage the underlying infrastructure, including configuring the individual nodes. 01:16 Let’s examine the benefits and functionality of Autopilot in more detail. 01:21 Autopilot is optimized for production. 01:24 Autopilot helps produce a strong security posture. 01:28 And Autopilot also promotes operational efficiency. 01:32 The GKE Standard mode has the same functionality as Autopilot, but you’re responsible for the configuration, management, and optimization of the cluster. 01:41 Unless you require the specific level of configuration control offered by GKE standard, it’s recommended that you use Autopilot mode. 01:50 You can create a Kubernetes cluster with GKE by using the Google Cloud console or the gcloud command that's provided by the Cloud software development kit. 02:00 GKE clusters can be customized, and they support different machine types, number of nodes, and network settings. 02:07 Kubernetes provides the mechanisms through which you interact with your cluster. 02:12 Kubernetes commands and resources are used to deploy and manage applications, perform administration tasks, set policies, and monitor the health of deployed workloads. 02:23 Running a GKE cluster comes with the benefit of advanced cluster management features that Google Cloud provides. 02:30 These include Google Cloud's load-balancing for Compute Engine instances; Node pools to designate subsets of nodes within a cluster for additional flexibility; Automatic scaling of your cluster's node instance 02:41 count; Automatic upgrades for your cluster's node software; Node auto-repair to maintain node health and availability; And logging and monitoring with Google Cloud Observability for visibility into your cluster. 02:56 To start up Kubernetes on a cluster in GKE, all you do is run this command: gcloud container clusters create-auto k1 --region, specifying the cluster region."
+    }
+]

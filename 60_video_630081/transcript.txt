@@ -1,0 +1,55 @@
+Transcript
+
+00:00
+One of the most famous free Google services is 8.8.8.8, which provides a public Domain Name Service to the world.
+
+00:07
+DNS is what translates internet hostnames to addresses, and as you might imagine, Google has a highly developed DNS infrastructure.
+
+00:16
+It makes 8.8.8.8 available so that everyone can take advantage of it.
+
+00:21
+But what about the internet hostnames and addresses of applications built in Google Cloud?
+
+00:26
+Google Cloud offers Cloud DNS to help the world find them.
+
+00:31
+It’s a managed DNS service that runs on the same infrastructure as Google.
+
+00:35
+It has low latency and high availability, and it’s a cost-effective way to make your applications and services available to your users.
+
+00:43
+The DNS information you publish is served from redundant locations around the world.
+
+00:48
+Cloud DNS is also programmable.
+
+00:51
+You can publish and manage millions of DNS zones and records using the Cloud console, the command-line interface, or the API.
+
+01:00
+Google also has a global system of edge caches.
+
+01:03
+Edge caching refers to the use of caching servers to store content closer to end users.
+
+01:09
+You can use this system to accelerate content delivery in your application by using Cloud CDN - Content Delivery Network.
+
+01:17
+This means your customers will experience lower network latency, the origins of your content will experience reduced load, and you can even save money.
+
+01:27
+After an Application Load Balancer is set up, Cloud CDN can be enabled with a single checkbox.
+
+01:34
+There are many other CDNs available out there, of course.
+
+01:37
+If you are already using one, chances are, it’s a part of Google Cloud’s CDN Interconnect partner program, and you can continue to use it.
+
+00:00
+One of the most famous free Google services is 8.8.8.8, which provides a public Domain Name Service to the world. 00:07 DNS is what translates internet hostnames to addresses, and as you might imagine, Google has a highly developed DNS infrastructure. 00:16 It makes 8.8.8.8 available so that everyone can take advantage of it. 00:21 But what about the internet hostnames and addresses of applications built in Google Cloud? 00:26 Google Cloud offers Cloud DNS to help the world find them. 00:31 It’s a managed DNS service that runs on the same infrastructure as Google. 00:35 It has low latency and high availability, and it’s a cost-effective way to make your applications and services available to your users. 00:43 The DNS information you publish is served from redundant locations around the world. 00:48 Cloud DNS is also programmable. 00:51 You can publish and manage millions of DNS zones and records using the Cloud console, the command-line interface, or the API. 01:00 Google also has a global system of edge caches. 01:03 Edge caching refers to the use of caching servers to store content closer to end users. 01:09 You can use this system to accelerate content delivery in your application by using Cloud CDN - Content Delivery Network. 01:17 This means your customers will experience lower network latency, the origins of your content will experience reduced load, and you can even save money. 01:27 After an Application Load Balancer is set up, Cloud CDN can be enabled with a single checkbox. 01:34 There are many other CDNs available out there, of course. 01:37 If you are already using one, chances are, it’s a part of Google Cloud’s CDN Interconnect partner program, and you can continue to use it.

@@ -1,0 +1,79 @@
+Transcript
+
+00:00
+Previously, we explored how virtual machines can autoscale to respond to changing loads.
+
+00:06
+But how do your customers get to your application when it might be provided by four VMs one moment, and by 40 VMs at another?
+
+00:15
+That’s done through Cloud Load Balancing.
+
+00:17
+The job of a load balancer is to distribute user traffic across multiple instances of an application.
+
+00:23
+By spreading the load, load balancing reduces the risk that applications experience performance issues.
+
+00:29
+Cloud Load Balancing is a fully distributed, software-defined, managed service for all your traffic.
+
+00:35
+And because the load balancers don’t run in VMs that you have to manage, you don’t have to worry about scaling or managing them.
+
+00:42
+You can put Cloud Load Balancing in front of all of your traffic: HTTP or HTTPS, other TCP and SSL traffic, and UDP traffic too.
+
+00:52
+Cloud Load Balancing provides cross-region load balancing, including automatic multi-region failover, which gently moves traffic in fractions if backends become unhealthy.
+
+01:02
+Cloud Load Balancing reacts quickly to changes in users, traffic, network, backend health, and other related conditions.
+
+01:10
+And what if you anticipate a huge spike in demand?
+
+01:13
+Say, your online game is already a hit; do you need to file a support ticket to warn Google of the incoming load?
+
+01:19
+No.
+
+01:20
+No so-called “pre-warming” is required.
+
+01:24
+Google Cloud offers a range of load balancing solutions that can be classified based on the OSI model layer they operate at and their specific functionalities.
+
+01:34
+Application Load Balancers operate at the application layer and are designed to handle HTTP and HTTPS traffic,
+
+01:40
+making them ideal for web applications and services that require advanced features like content-based routing and SSL/TLS termination.
+
+01:49
+Application Load Balancers operate as reverse proxies, distributing incoming traffic across multiple backend instances based on rules you define.
+
+01:59
+They are highly flexible and can be configured for both internet-facing (external) and internal applications.
+
+02:07
+Network Load Balancers operate at the transport layer and efficiently handle TCP, UDP, and other IP protocols.
+
+02:15
+They can be further classified into two types: Proxy Network Load Balancers also function as reverse proxies, terminating client connections and establishing new ones to backend services.
+
+02:27
+They offer advanced traffic management capabilities and support backends located both on-premises and in various cloud environments.
+
+02:34
+Unlike proxy Network Load Balancers, passthrough Network Load Balancers do not modify or terminate connections.
+
+02:42
+Instead, they directly forward traffic to the backend while preserving the original source IP address.
+
+02:47
+This type is well-suited for applications that require direct server return or need to handle a wider range of IP protocols.
+
+00:00
+Previously, we explored how virtual machines can autoscale to respond to changing loads. 00:06 But how do your customers get to your application when it might be provided by four VMs one moment, and by 40 VMs at another? 00:15 That’s done through Cloud Load Balancing. 00:17 The job of a load balancer is to distribute user traffic across multiple instances of an application. 00:23 By spreading the load, load balancing reduces the risk that applications experience performance issues. 00:29 Cloud Load Balancing is a fully distributed, software-defined, managed service for all your traffic. 00:35 And because the load balancers don’t run in VMs that you have to manage, you don’t have to worry about scaling or managing them. 00:42 You can put Cloud Load Balancing in front of all of your traffic: HTTP or HTTPS, other TCP and SSL traffic, and UDP traffic too. 00:52 Cloud Load Balancing provides cross-region load balancing, including automatic multi-region failover, which gently moves traffic in fractions if backends become unhealthy. 01:02 Cloud Load Balancing reacts quickly to changes in users, traffic, network, backend health, and other related conditions. 01:10 And what if you anticipate a huge spike in demand? 01:13 Say, your online game is already a hit; do you need to file a support ticket to warn Google of the incoming load? 01:19 No. 01:20 No so-called “pre-warming” is required. 01:24 Google Cloud offers a range of load balancing solutions that can be classified based on the OSI model layer they operate at and their specific functionalities. 01:34 Application Load Balancers operate at the application layer and are designed to handle HTTP and HTTPS traffic, 01:40 making them ideal for web applications and services that require advanced features like content-based routing and SSL/TLS termination. 01:49 Application Load Balancers operate as reverse proxies, distributing incoming traffic across multiple backend instances based on rules you define. 01:59 They are highly flexible and can be configured for both internet-facing (external) and internal applications. 02:07 Network Load Balancers operate at the transport layer and efficiently handle TCP, UDP, and other IP protocols. 02:15 They can be further classified into two types: Proxy Network Load Balancers also function as reverse proxies, terminating client connections and establishing new ones to backend services. 02:27 They offer advanced traffic management capabilities and support backends located both on-premises and in various cloud environments. 02:34 Unlike proxy Network Load Balancers, passthrough Network Load Balancers do not modify or terminate connections. 02:42 Instead, they directly forward traffic to the backend while preserving the original source IP address. 02:47 This type is well-suited for applications that require direct server return or need to handle a wider range of IP protocols.

@@ -1,0 +1,82 @@
+[
+    {
+        "timestamp": "00:00",
+        "text": "Hi, and welcome to the Google Cloud Fundamentals: Core Infrastructure training course."
+    },
+    {
+        "timestamp": "00:05",
+        "text": "The goal of this course is to provide you with an overview of Google Cloud."
+    },
+    {
+        "timestamp": "00:10",
+        "text": "Google Cloud offerings can be broadly categorised as compute, storage, big data, machine learning, and application services for web, mobile, analytics, and back-end solutions."
+    },
+    {
+        "timestamp": "00:23",
+        "text": "Through a combination of videos, quizzes, and hands-on labs, you’ll learn the value of Google Cloud and how cloud solutions factor into business strategies."
+    },
+    {
+        "timestamp": "00:33",
+        "text": "The intended target audience of today’s course consists of solutions developers, systems operations professionals, and solution architects planning to deploy applications and create application environments on Google Cloud."
+    },
+    {
+        "timestamp": "00:46",
+        "text": "The course will also be useful for business decision makers evaluating Google Cloud."
+    },
+    {
+        "timestamp": "00:51",
+        "text": "While you should be happy to hear that we’ll be finding out about services and concepts that are specific to Google Cloud in this"
+    },
+    {
+        "timestamp": "00:56",
+        "text": "course, do keep in mind that, as a ‘fundamentals’ level course, some content will be geared towards learners who are entirely new to cloud technologies."
+    },
+    {
+        "timestamp": "01:06",
+        "text": "This course has no prerequisites, although it’s helpful be familiar with application development, Linux operating systems, systems operations, and data analytics/machine learning to best understand the technologies covered."
+    },
+    {
+        "timestamp": "01:20",
+        "text": "There are seven key learning objectives that we’re hoping to achieve."
+    },
+    {
+        "timestamp": "01:24",
+        "text": "By the end of this course, you should be able to: Identify the purpose and value of Google Cloud products and services."
+    },
+    {
+        "timestamp": "01:31",
+        "text": "Define how infrastructure is organized and controlled in Google Cloud."
+    },
+    {
+        "timestamp": "01:36",
+        "text": "Explain how to create a basic infrastructure in Google Cloud."
+    },
+    {
+        "timestamp": "01:40",
+        "text": "Select and use Google Cloud storage options."
+    },
+    {
+        "timestamp": "01:44",
+        "text": "Describe the purpose and value of Google Kubernetes Engine."
+    },
+    {
+        "timestamp": "01:48",
+        "text": "Identify the use cases for serverless Google Cloud services."
+    },
+    {
+        "timestamp": "01:52",
+        "text": "And combine Google Cloud knowledge with prompt engineering to improve Gemini responses."
+    },
+    {
+        "timestamp": "01:59",
+        "text": "OK, all set?"
+    },
+    {
+        "timestamp": "02:00",
+        "text": "Let’s begin!"
+    },
+    {
+        "timestamp": "00:00",
+        "text": "Hi, and welcome to the Google Cloud Fundamentals: Core Infrastructure training course. 00:05 The goal of this course is to provide you with an overview of Google Cloud. 00:10 Google Cloud offerings can be broadly categorised as compute, storage, big data, machine learning, and application services for web, mobile, analytics, and back-end solutions. 00:23 Through a combination of videos, quizzes, and hands-on labs, you’ll learn the value of Google Cloud and how cloud solutions factor into business strategies. 00:33 The intended target audience of today’s course consists of solutions developers, systems operations professionals, and solution architects planning to deploy applications and create application environments on Google Cloud. 00:46 The course will also be useful for business decision makers evaluating Google Cloud. 00:51 While you should be happy to hear that we’ll be finding out about services and concepts that are specific to Google Cloud in this 00:56 course, do keep in mind that, as a ‘fundamentals’ level course, some content will be geared towards learners who are entirely new to cloud technologies. 01:06 This course has no prerequisites, although it’s helpful be familiar with application development, Linux operating systems, systems operations, and data analytics/machine learning to best understand the technologies covered. 01:20 There are seven key learning objectives that we’re hoping to achieve. 01:24 By the end of this course, you should be able to: Identify the purpose and value of Google Cloud products and services. 01:31 Define how infrastructure is organized and controlled in Google Cloud. 01:36 Explain how to create a basic infrastructure in Google Cloud. 01:40 Select and use Google Cloud storage options. 01:44 Describe the purpose and value of Google Kubernetes Engine. 01:48 Identify the use cases for serverless Google Cloud services. 01:52 And combine Google Cloud knowledge with prompt engineering to improve Gemini responses. 01:59 OK, all set? 02:00 Let’s begin!"
+    }
+]

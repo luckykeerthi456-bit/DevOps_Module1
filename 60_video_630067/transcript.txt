@@ -1,0 +1,85 @@
+Transcript
+
+00:00
+To round off this section of the course, let’s take a brief look at Google Cloud’s pricing structure.
+
+00:05
+Google was the first major cloud provider to deliver per-second billing for its infrastructure-as-a-service compute offering, Compute Engine.
+
+00:14
+In addition, per-second billing is now also offered for users of Google Kubernetes Engine our container infrastructure as a service, Managed Service for Apache Spark,
+
+00:25
+which is the equivalent of the bigdata system Hadoop, but operating as a service, and App Engine flexible environment VMs, a platform as a service.
+
+00:35
+Compute Engine offers automatically applied sustained-use discounts, which are automatic discounts that you get for running a virtual machine instance for a significant portion of the billing month.
+
+00:46
+Specifically, when you run an instance for more than 25% of a month, Compute Engine automatically gives you a discount for every incremental minute you use for that instance.
+
+00:57
+Custom virtual machine types allow Compute Engine virtual machines to be fine-tuned with optimal amounts of
+
+01:04
+vCPU and memory for their applications so that you can tailor your pricing for your workloads.
+
+01:11
+Our online pricing calculator can help estimate your costs.
+
+01:15
+Visit cloud.google.com/products/calculator to try it out.
+
+01:22
+Now, you’re probably thinking, “How can I make sure I don’t accidentally run up a big Google Cloud bill?”
+
+01:28
+You can define budgets at the billing account level or at the project level.
+
+01:33
+A budget can be a fixed limit, or it can be tied to another metric; for example, a percentage of the previous month’s spend.
+
+01:42
+To be notified when costs approach your budget limit, you can create an alert.
+
+01:47
+For example, with a budget limit of $20,000 and an alert set at 90%, you’ll receive a notification alert when your expenses reach $18,000.
+
+01:58
+Alerts are generally set at 50%, 90% and 100%, but can also be customized.
+
+02:06
+Reports is a visual tool in the Google Cloud console that allows you to monitor expenditure based on a project or services.
+
+02:15
+Finally, Google Cloud also implements quotas, which are designed to prevent the over-consumption of resources because of
+
+02:21
+an error or a malicious attack, protecting both account owners and the Google Cloud community as a whole.
+
+02:29
+There are two types of quotas: rate quotas and allocation quotas.
+
+02:34
+Both are applied at the project level.
+
+02:37
+Rate quotas reset after a specific time.
+
+02:39
+For example, by default, the GKE service implements a quota of 3,000 calls to its API from each Google Cloud project every 100 seconds.
+
+02:50
+After that 100 seconds, the limit is reset.
+
+02:54
+Allocation quotas govern the number of resources you can have in your projects.
+
+02:59
+For example, by default, each Google Cloud project has a quota allowing it no more than 15 Virtual Private Cloud networks.
+
+03:08
+Although projects all start with the same quotas, you can change some of them by requesting an increase from Google Cloud Support.
+
+00:00
+To round off this section of the course, let’s take a brief look at Google Cloud’s pricing structure. 00:05 Google was the first major cloud provider to deliver per-second billing for its infrastructure-as-a-service compute offering, Compute Engine. 00:14 In addition, per-second billing is now also offered for users of Google Kubernetes Engine our container infrastructure as a service, Managed Service for Apache Spark, 00:25 which is the equivalent of the bigdata system Hadoop, but operating as a service, and App Engine flexible environment VMs, a platform as a service. 00:35 Compute Engine offers automatically applied sustained-use discounts, which are automatic discounts that you get for running a virtual machine instance for a significant portion of the billing month. 00:46 Specifically, when you run an instance for more than 25% of a month, Compute Engine automatically gives you a discount for every incremental minute you use for that instance. 00:57 Custom virtual machine types allow Compute Engine virtual machines to be fine-tuned with optimal amounts of 01:04 vCPU and memory for their applications so that you can tailor your pricing for your workloads. 01:11 Our online pricing calculator can help estimate your costs. 01:15 Visit cloud.google.com/products/calculator to try it out. 01:22 Now, you’re probably thinking, “How can I make sure I don’t accidentally run up a big Google Cloud bill?” 01:28 You can define budgets at the billing account level or at the project level. 01:33 A budget can be a fixed limit, or it can be tied to another metric; for example, a percentage of the previous month’s spend. 01:42 To be notified when costs approach your budget limit, you can create an alert. 01:47 For example, with a budget limit of $20,000 and an alert set at 90%, you’ll receive a notification alert when your expenses reach $18,000. 01:58 Alerts are generally set at 50%, 90% and 100%, but can also be customized. 02:06 Reports is a visual tool in the Google Cloud console that allows you to monitor expenditure based on a project or services. 02:15 Finally, Google Cloud also implements quotas, which are designed to prevent the over-consumption of resources because of 02:21 an error or a malicious attack, protecting both account owners and the Google Cloud community as a whole. 02:29 There are two types of quotas: rate quotas and allocation quotas. 02:34 Both are applied at the project level. 02:37 Rate quotas reset after a specific time. 02:39 For example, by default, the GKE service implements a quota of 3,000 calls to its API from each Google Cloud project every 100 seconds. 02:50 After that 100 seconds, the limit is reset. 02:54 Allocation quotas govern the number of resources you can have in your projects. 02:59 For example, by default, each Google Cloud project has a quota allowing it no more than 15 Virtual Private Cloud networks. 03:08 Although projects all start with the same quotas, you can change some of them by requesting an increase from Google Cloud Support.

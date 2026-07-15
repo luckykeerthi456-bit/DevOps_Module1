@@ -1,0 +1,154 @@
+[
+    {
+        "timestamp": "00:00",
+        "text": "There are four primary storage classes in Cloud Storage."
+    },
+    {
+        "timestamp": "00:04",
+        "text": "The first is Standard Storage."
+    },
+    {
+        "timestamp": "00:07",
+        "text": "Standard Storage is considered best for frequently accessed, or “hot,” data."
+    },
+    {
+        "timestamp": "00:11",
+        "text": "It’s also great for data that’s stored for only brief periods of time."
+    },
+    {
+        "timestamp": "00:16",
+        "text": "The second storage class is Nearline Storage."
+    },
+    {
+        "timestamp": "00:19",
+        "text": "This is best for storing infrequently accessed data, like reading or modifying data on average once a month or less."
+    },
+    {
+        "timestamp": "00:26",
+        "text": "Examples might include data backups, long-tail multimedia content, or data archiving."
+    },
+    {
+        "timestamp": "00:34",
+        "text": "The third storage class is Coldline Storage."
+    },
+    {
+        "timestamp": "00:37",
+        "text": "This is also a low-cost option for storing infrequently accessed data."
+    },
+    {
+        "timestamp": "00:41",
+        "text": "However, as compared to Nearline Storage, Coldline Storage is meant for reading or modifying data, at most, once every 90 days."
+    },
+    {
+        "timestamp": "00:50",
+        "text": "And the fourth storage class is Archive Storage."
+    },
+    {
+        "timestamp": "00:54",
+        "text": "This is the lowest-cost option, used ideally for data archiving, online backup, and disaster recovery."
+    },
+    {
+        "timestamp": "01:01",
+        "text": "It’s the best choice for data that you plan to access less than once a year,"
+    },
+    {
+        "timestamp": "01:05",
+        "text": "because it has higher costs for data access and operations and a 365-day minimum storage duration."
+    },
+    {
+        "timestamp": "01:13",
+        "text": "Although each of these four classes has differences, it’s worth noting there are several characteristics that apply across all of these storage classes."
+    },
+    {
+        "timestamp": "01:23",
+        "text": "These include: Unlimited storage with no minimum object size requirement, worldwide accessibility and locations, low latency and high durability, a"
+    },
+    {
+        "timestamp": "01:33",
+        "text": "uniform experience, which extends to security, tools, and APIs, and geo-redundancy if data is stored in a multi-region or dual-region."
+    },
+    {
+        "timestamp": "01:46",
+        "text": "This means placing physical servers in geographically diverse data centers to protect against catastrophic events and natural disasters, and load-balancing traffic for optimal performance."
+    },
+    {
+        "timestamp": "01:58",
+        "text": "Cloud Storage also provides a feature called Autoclass, which automatically transitions objects to appropriate storage classes based on each object's access pattern."
+    },
+    {
+        "timestamp": "02:09",
+        "text": "The feature moves data that is not accessed to colder storage classes to reduce storage cost and moves data that is accessed to Standard storage to optimize future accesses."
+    },
+    {
+        "timestamp": "02:20",
+        "text": "Autoclass simplifies and automates cost saving for your Cloud Storage data."
+    },
+    {
+        "timestamp": "02:26",
+        "text": "Cloud Storage has no minimum fee because you pay only for what you use, and prior provisioning of capacity isn’t necessary."
+    },
+    {
+        "timestamp": "02:34",
+        "text": "And from a security perspective, Cloud Storage always encrypts data on the server side, before it’s written to disk, at no additional charge."
+    },
+    {
+        "timestamp": "02:43",
+        "text": "Data traveling between a customer’s device and Google is encrypted by default using HTTPS/TLS, which is Transport Layer Security."
+    },
+    {
+        "timestamp": "02:53",
+        "text": "Regardless of which storage class you choose, there are several ways to bring data into Cloud Storage."
+    },
+    {
+        "timestamp": "02:58",
+        "text": "Many customers simply carry out their own online transfer using gcloud storage, which is the Cloud Storage command from the Cloud SDK."
+    },
+    {
+        "timestamp": "03:07",
+        "text": "Data can also be moved in by using a drag and drop option in the Cloud Console, if accessed through the Google Chrome web browser."
+    },
+    {
+        "timestamp": "03:15",
+        "text": "But what if you have to upload terabytes or even petabytes of data?"
+    },
+    {
+        "timestamp": "03:20",
+        "text": "Storage Transfer Service enables you to import large amounts of online data into Cloud Storage quickly and cost-effectively."
+    },
+    {
+        "timestamp": "03:28",
+        "text": "The Storage Transfer Service lets you schedule and manage batch transfers to Cloud Storage from another cloud provider, from a different Cloud Storage region, or from an HTTP(S) endpoint."
+    },
+    {
+        "timestamp": "03:38",
+        "text": "And then there is the Transfer Appliance, which is a rackable, high-capacity storage server that you lease from Google Cloud."
+    },
+    {
+        "timestamp": "03:47",
+        "text": "You connect it to your network, load it with data, and then ship it to an upload facility where the data is uploaded to Cloud Storage."
+    },
+    {
+        "timestamp": "03:55",
+        "text": "You can transfer up to a petabyte of data on a single appliance."
+    },
+    {
+        "timestamp": "04:00",
+        "text": "Cloud Storage’s tight integration with other Google Cloud products and services means that there are many additional ways to move data into the service."
+    },
+    {
+        "timestamp": "04:08",
+        "text": "For example, you can import and export tables to and from both BigQuery and Cloud SQL."
+    },
+    {
+        "timestamp": "04:15",
+        "text": "You can also store App Engine logs, Firestore backups, and objects used by App Engine applications, like images."
+    },
+    {
+        "timestamp": "04:24",
+        "text": "Cloud Storage can also store instance startup scripts, Compute Engine images, and objects used by Compute Engine applications."
+    },
+    {
+        "timestamp": "00:00",
+        "text": "There are four primary storage classes in Cloud Storage. 00:04 The first is Standard Storage. 00:07 Standard Storage is considered best for frequently accessed, or “hot,” data. 00:11 It’s also great for data that’s stored for only brief periods of time. 00:16 The second storage class is Nearline Storage. 00:19 This is best for storing infrequently accessed data, like reading or modifying data on average once a month or less. 00:26 Examples might include data backups, long-tail multimedia content, or data archiving. 00:34 The third storage class is Coldline Storage. 00:37 This is also a low-cost option for storing infrequently accessed data. 00:41 However, as compared to Nearline Storage, Coldline Storage is meant for reading or modifying data, at most, once every 90 days. 00:50 And the fourth storage class is Archive Storage. 00:54 This is the lowest-cost option, used ideally for data archiving, online backup, and disaster recovery. 01:01 It’s the best choice for data that you plan to access less than once a year, 01:05 because it has higher costs for data access and operations and a 365-day minimum storage duration. 01:13 Although each of these four classes has differences, it’s worth noting there are several characteristics that apply across all of these storage classes. 01:23 These include: Unlimited storage with no minimum object size requirement, worldwide accessibility and locations, low latency and high durability, a 01:33 uniform experience, which extends to security, tools, and APIs, and geo-redundancy if data is stored in a multi-region or dual-region. 01:46 This means placing physical servers in geographically diverse data centers to protect against catastrophic events and natural disasters, and load-balancing traffic for optimal performance. 01:58 Cloud Storage also provides a feature called Autoclass, which automatically transitions objects to appropriate storage classes based on each object's access pattern. 02:09 The feature moves data that is not accessed to colder storage classes to reduce storage cost and moves data that is accessed to Standard storage to optimize future accesses. 02:20 Autoclass simplifies and automates cost saving for your Cloud Storage data. 02:26 Cloud Storage has no minimum fee because you pay only for what you use, and prior provisioning of capacity isn’t necessary. 02:34 And from a security perspective, Cloud Storage always encrypts data on the server side, before it’s written to disk, at no additional charge. 02:43 Data traveling between a customer’s device and Google is encrypted by default using HTTPS/TLS, which is Transport Layer Security. 02:53 Regardless of which storage class you choose, there are several ways to bring data into Cloud Storage. 02:58 Many customers simply carry out their own online transfer using gcloud storage, which is the Cloud Storage command from the Cloud SDK. 03:07 Data can also be moved in by using a drag and drop option in the Cloud Console, if accessed through the Google Chrome web browser. 03:15 But what if you have to upload terabytes or even petabytes of data? 03:20 Storage Transfer Service enables you to import large amounts of online data into Cloud Storage quickly and cost-effectively. 03:28 The Storage Transfer Service lets you schedule and manage batch transfers to Cloud Storage from another cloud provider, from a different Cloud Storage region, or from an HTTP(S) endpoint. 03:38 And then there is the Transfer Appliance, which is a rackable, high-capacity storage server that you lease from Google Cloud. 03:47 You connect it to your network, load it with data, and then ship it to an upload facility where the data is uploaded to Cloud Storage. 03:55 You can transfer up to a petabyte of data on a single appliance. 04:00 Cloud Storage’s tight integration with other Google Cloud products and services means that there are many additional ways to move data into the service. 04:08 For example, you can import and export tables to and from both BigQuery and Cloud SQL. 04:15 You can also store App Engine logs, Firestore backups, and objects used by App Engine applications, like images. 04:24 Cloud Storage can also store instance startup scripts, Compute Engine images, and objects used by Compute Engine applications."
+    }
+]

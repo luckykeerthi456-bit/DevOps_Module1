@@ -1,0 +1,22 @@
+Transcript
+
+00:00
+Some organizations are afraid to bring their workloads to the cloud because they're afraid they'll get locked into a particular vendor.
+
+00:06
+However, if, for whatever reason, a customer decides that Google is no longer the best provider for their needs, we provide them with the ability to run their applications elsewhere.
+
+00:17
+Google publishes key elements of technology using open source licenses to create ecosystems that provide customers with options other than Google.
+
+00:26
+For example, TensorFlow, an open source software library for machine learning developed inside Google, is at the heart of a strong open source ecosystem.
+
+00:35
+Google provides interoperability at multiple layers of the stack.
+
+00:39
+Kubernetes and Google Kubernetes Engine give customers the ability to mix and match microservices running across different clouds, while Google Cloud Observability lets customers monitor workloads across multiple cloud providers.
+
+00:00
+Some organizations are afraid to bring their workloads to the cloud because they're afraid they'll get locked into a particular vendor. 00:06 However, if, for whatever reason, a customer decides that Google is no longer the best provider for their needs, we provide them with the ability to run their applications elsewhere. 00:17 Google publishes key elements of technology using open source licenses to create ecosystems that provide customers with options other than Google. 00:26 For example, TensorFlow, an open source software library for machine learning developed inside Google, is at the heart of a strong open source ecosystem. 00:35 Google provides interoperability at multiple layers of the stack. 00:39 Kubernetes and Google Kubernetes Engine give customers the ability to mix and match microservices running across different clouds, while Google Cloud Observability lets customers monitor workloads across multiple cloud providers.

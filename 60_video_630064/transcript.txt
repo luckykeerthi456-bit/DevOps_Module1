@@ -1,0 +1,43 @@
+Transcript
+
+00:00
+The virtual world, which includes Google Cloud’s network, is built on physical infrastructure, and all those racks of humming servers use huge amounts of energy.
+
+00:09
+Altogether, existing data centers use roughly 2% of the world’s electricity.
+
+00:14
+With this in mind, Google works to make their data centers run as efficiently as possible.
+
+00:20
+Just like our customers, Google is trying to do the right things for the planet.
+
+00:25
+We understand that Google Cloud customers have environmental goals of their own, and running their workloads on Google Cloud can be a part of meeting those goals.
+
+00:34
+Therefore, it’s useful to note that Google's data centers were the first to achieve ISO 14001 certification, which is a
+
+00:41
+standard that maps out a framework for an organization to enhance its environmental performance through improving resource efficiency and reducing waste.
+
+00:50
+As an example of how this is being done, here’s Google’s data center in Hamina, Finland.
+
+00:56
+This facility is one of the most advanced and efficient data centers in the Google fleet.
+
+01:01
+Its cooling system, which uses sea water from the Bay of Finland, reduces energy use and is the first of its kind anywhere in the world.
+
+01:09
+In our founding decade, Google became the first major company to be carbon neutral.
+
+01:14
+In our second decade, we were the first company to achieve 100% renewable energy.
+
+01:20
+By 2030, we aim to be the first major company to operate on carbon-free energy, 24 hours a day, 7 days a week, 365 days a year.
+
+00:00
+The virtual world, which includes Google Cloud’s network, is built on physical infrastructure, and all those racks of humming servers use huge amounts of energy. 00:09 Altogether, existing data centers use roughly 2% of the world’s electricity. 00:14 With this in mind, Google works to make their data centers run as efficiently as possible. 00:20 Just like our customers, Google is trying to do the right things for the planet. 00:25 We understand that Google Cloud customers have environmental goals of their own, and running their workloads on Google Cloud can be a part of meeting those goals. 00:34 Therefore, it’s useful to note that Google's data centers were the first to achieve ISO 14001 certification, which is a 00:41 standard that maps out a framework for an organization to enhance its environmental performance through improving resource efficiency and reducing waste. 00:50 As an example of how this is being done, here’s Google’s data center in Hamina, Finland. 00:56 This facility is one of the most advanced and efficient data centers in the Google fleet. 01:01 Its cooling system, which uses sea water from the Bay of Finland, reduces energy use and is the first of its kind anywhere in the world. 01:09 In our founding decade, Google became the first major company to be carbon neutral. 01:14 In our second decade, we were the first company to achieve 100% renewable energy. 01:20 By 2030, we aim to be the first major company to operate on carbon-free energy, 24 hours a day, 7 days a week, 365 days a year.

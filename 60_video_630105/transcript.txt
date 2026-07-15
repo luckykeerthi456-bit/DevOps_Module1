@@ -1,0 +1,19 @@
+Transcript
+
+00:00
+Congratulations on completing the Google Cloud Fundamentals: Core Infrastructure training course.
+
+00:05
+Before you go, let’s take a few minutes to review what we’ve covered.
+
+00:10
+In module 1, you were introduced to Google Cloud and cloud computing.
+
+00:14
+Specifically, you explored: The concept of managed infrastructure and managed services, through IaaS, infrastructure as a service, and PaaS, platform as a service.
+
+00:24
+The Google Cloud network.
+
+00:26
+Google Cloud’s focus on security throughout our infrastructure.

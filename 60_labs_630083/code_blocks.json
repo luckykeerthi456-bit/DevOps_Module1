@@ -1,0 +1,12 @@
+[
+    "\"Username\"",
+    "\"Password\"",
+    "Region 1",
+    "Region 2",
+    "Region",
+    "Zone 1",
+    "Zone 2",
+    "ping -c 3 <Enter mynet-r2-vm's internal IP here>",
+    "ping -c 3 <Enter mynet-r2-vm's external IP here>",
+    "exit"
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "timestamp": "00:00",
+        "text": "The move to virtualized data centers introduced customers to two new types of offerings: infrastructure as a service, commonly referred to as IaaS, and platform as a service, or PaaS."
+    },
+    {
+        "timestamp": "00:13",
+        "text": "IaaS offerings provide raw compute, storage, and network capabilities, organized virtually into resources that are similar to physical data centers."
+    },
+    {
+        "timestamp": "00:23",
+        "text": "Compute Engine is an example of a Google Cloud IaaS service."
+    },
+    {
+        "timestamp": "00:29",
+        "text": "PaaS offerings, in contrast, bind code to libraries that provide access to the infrastructure application needs."
+    },
+    {
+        "timestamp": "00:36",
+        "text": "This allows more resources to be focused on application logic."
+    },
+    {
+        "timestamp": "00:41",
+        "text": "App Engine is an example of a Google Cloud PaaS service."
+    },
+    {
+        "timestamp": "00:46",
+        "text": "In the IaaS model, customers pay for the resources they allocate ahead of time; in the PaaS model, customers pay for the resources they actually use."
+    },
+    {
+        "timestamp": "00:57",
+        "text": "As cloud computing has evolved, the momentum has shifted toward managed infrastructure and managed services."
+    },
+    {
+        "timestamp": "01:04",
+        "text": "Leveraging managed resources and services allows companies to concentrate more on their business goals and spend less time and money on creating and maintaining their technical infrastructure."
+    },
+    {
+        "timestamp": "01:15",
+        "text": "It allows companies to deliver products and services to their customers more quickly and reliably."
+    },
+    {
+        "timestamp": "01:21",
+        "text": "Serverless is yet another step in the evolution of cloud computing."
+    },
+    {
+        "timestamp": "01:26",
+        "text": "It allows developers to concentrate on their code, rather than on server configuration, by eliminating the need for any infrastructure management."
+    },
+    {
+        "timestamp": "01:35",
+        "text": "Serverless technologies offered by Google include Cloud Run, which allows customers to deploy their containerized microservices based application in a fully-managed environment."
+    },
+    {
+        "timestamp": "01:44",
+        "text": "and Cloud Run functions, which manages event-driven code as a pay-as-you-go service."
+    },
+    {
+        "timestamp": "01:50",
+        "text": "While it’s outside the scope of this course, you might have heard about software as"
+    },
+    {
+        "timestamp": "01:53",
+        "text": "a service, SaaS, and wondered what it is and how it fits into the Cloud ecosphere."
+    },
+    {
+        "timestamp": "02:00",
+        "text": "SaaS provides the entire application stack, delivering an entire cloud-based application that customers can access and use."
+    },
+    {
+        "timestamp": "02:09",
+        "text": "Software as a Service applications are not installed on your local computer."
+    },
+    {
+        "timestamp": "02:13",
+        "text": "Instead, they run in the cloud as a service and are consumed directly over the internet by end users."
+    },
+    {
+        "timestamp": "02:20",
+        "text": "Popular Google applications such as Gmail, Docs, and Drive, that are a part of Google Workspace, are all examples of SaaS."
+    },
+    {
+        "timestamp": "00:00",
+        "text": "The move to virtualized data centers introduced customers to two new types of offerings: infrastructure as a service, commonly referred to as IaaS, and platform as a service, or PaaS. 00:13 IaaS offerings provide raw compute, storage, and network capabilities, organized virtually into resources that are similar to physical data centers. 00:23 Compute Engine is an example of a Google Cloud IaaS service. 00:29 PaaS offerings, in contrast, bind code to libraries that provide access to the infrastructure application needs. 00:36 This allows more resources to be focused on application logic. 00:41 App Engine is an example of a Google Cloud PaaS service. 00:46 In the IaaS model, customers pay for the resources they allocate ahead of time; in the PaaS model, customers pay for the resources they actually use. 00:57 As cloud computing has evolved, the momentum has shifted toward managed infrastructure and managed services. 01:04 Leveraging managed resources and services allows companies to concentrate more on their business goals and spend less time and money on creating and maintaining their technical infrastructure. 01:15 It allows companies to deliver products and services to their customers more quickly and reliably. 01:21 Serverless is yet another step in the evolution of cloud computing. 01:26 It allows developers to concentrate on their code, rather than on server configuration, by eliminating the need for any infrastructure management. 01:35 Serverless technologies offered by Google include Cloud Run, which allows customers to deploy their containerized microservices based application in a fully-managed environment. 01:44 and Cloud Run functions, which manages event-driven code as a pay-as-you-go service. 01:50 While it’s outside the scope of this course, you might have heard about software as 01:53 a service, SaaS, and wondered what it is and how it fits into the Cloud ecosphere. 02:00 SaaS provides the entire application stack, delivering an entire cloud-based application that customers can access and use. 02:09 Software as a Service applications are not installed on your local computer. 02:13 Instead, they run in the cloud as a service and are consumed directly over the internet by end users. 02:20 Popular Google applications such as Gmail, Docs, and Drive, that are a part of Google Workspace, are all examples of SaaS."
+    }
+]

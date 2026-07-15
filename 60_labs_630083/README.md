@@ -1,0 +1,580 @@
+# Virtual Machines and Networks in the Cloud - Get Started with Virtual Private Cloud Networking and Compute Engine | Google Skills for Partners
+
+---
+
+## Metadata
+
+- **URL:** https://partner.skills.google/paths/20/course_sessions/39706059/labs/630083
+- **Lesson type:** `labs`
+- **Path ID:** `20`
+- **Container type:** `course_sessions`
+- **Container ID:** `39706059`
+- **Lesson ID:** `630083`
+- **Generated:** 2026-07-10 04:47:12
+
+---
+
+## Open Human-Readable HTML
+
+[Open readable_page.html](readable_page.html)
+
+> README/GitHub Markdown usually blocks playable iframes. Open `readable_page.html` to see the playable YouTube frame and browser-like lesson page.
+
+---
+
+## Screenshot
+
+![Full Page Screenshot](screenshot.png)
+
+---
+
+## YouTube Video
+
+_No YouTube video found._
+---
+
+## Transcript
+
+_No transcript available for this page._
+---
+
+## Page Text
+
+Partner
+4
+navigate_next
+Professional Cloud DevOps Engineer Certification
+navigate_next
+Google Cloud Fundamentals: Core Infrastructure
+navigate_next
+Get Started with Virtual Private Cloud Networking and Compute Engine
+This lab may incorporate AI tools to support your learning.
+Overview
+
+Google Cloud Virtual Private Cloud (VPC) provides networking functionality to Compute Engine virtual machine (VM) instances, Kubernetes Engine containers, and App Engine flexible environment. In other words, without a VPC network you cannot create VM instances, containers, or App Engine applications. Therefore, each Google Cloud project has a default network to get you started.
+
+You can think of a VPC network as similar to a physical network, except that it is virtualized within Google Cloud. A VPC network is a global resource that consists of a list of regional virtual subnetworks (subnets) in data centers, all connected by a global wide area network (WAN). VPC networks are logically isolated from each other in Google Cloud.
+
+In this lab, you create an auto mode VPC network with firewall rules and two VM instances. Then, you explore the connectivity for the VM instances.
+
+Objectives
+
+In this lab, you learn how to perform the following tasks:
+
+Explore the default VPC network
+Create an auto mode network with firewall rules
+Create VM instances using Compute Engine
+Explore the connectivity for VM instances
+Setup and requirements
+
+For each lab, you get a new Google Cloud project and set of resources for a fixed time at no cost.
+
+Click the Start Lab button. If you need to pay for the lab, a pop-up opens for you to select your payment method. On the right is the Lab setup and access panel with the following:
+
+The Open Google Cloud console button
+The temporary credentials (username and password) that you must use for this lab
+Other information, if needed, to step through this lab
+
+Note that the lab timer is located near the top of the page, showing the remaining time.
+
+Click Open Google Cloud console (or right-click and select Open Link in Incognito Window if you are running the Chrome browser).
+
+The lab spins up resources, and then opens another tab that shows the Sign in page.
+
+Tip: Arrange the tabs in separate windows, side-by-side.
+
+Note: If you see the Choose an account dialog, click Use Another Account.
+
+If necessary, copy the Username below and paste it into the Sign in dialog.
+
+You can also find the Username in the Lab setup and access panel.
+
+Click Next.
+
+Copy the Password below and paste it into the Welcome dialog.
+
+You can also find the Password in the Lab setup and access panel.
+
+Click Next.
+
+Important: You must use the credentials the lab provides you. Do not use your Google Cloud account credentials.
+Note: Using your own Google Cloud account for this lab may incur extra charges.
+
+Click through the subsequent pages:
+
+Accept the terms and conditions.
+Do not add recovery options or two-factor authentication (because this is a temporary account).
+Do not sign up for free trials.
+
+After a few moments, the Google Cloud console opens in this tab.
+
+Note: To view a menu with a list of Google Cloud products and services, click the Navigation menu at the top-left, or type the service or product name in the Search field. 
+Task 1. Explore the default network
+
+Each Google Cloud project has a default network with subnets, routes, and firewall rules.
+
+View the subnets
+
+The default network has a subnet in each Google Cloud region.
+
+In the Cloud console, in the Navigation menu (), click VPC network > VPC networks.
+
+Click default.
+
+Click Subnets.
+
+Notice the default network with its subnets.
+Each subnet is associated with a Google Cloud region and a private RFC 1918 CIDR block for its internal IP addresses range and a gateway.
+
+View the routes
+
+Routes tell VM instances and the VPC network how to send traffic from an instance to a destination, either inside the network or outside Google Cloud. Each VPC network comes with some default routes to route traffic among its subnets and send traffic from eligible instances to the internet.
+
+In the left pane, click Routes.
+
+In Effective Routes click Network, and then select default.
+
+Click Region and select the Lab Region assigned to you by Google Skills.
+
+Click View.
+
+Notice that there is a route for each subnet.
+These routes are managed for you, but you can create custom static routes to direct some packets to specific destinations. For example, you can create a route that sends all outbound traffic to an instance configured as a NAT gateway.
+
+View the Firewall rules
+
+Each VPC network implements a distributed virtual firewall that you can configure. Firewall rules allow you to control which packets are allowed to travel to which destinations. Every VPC network has two implied firewall rules that block all incoming connections and allow all outgoing connections.
+
+In the left pane, click Firewall.
+Notice that there are 4 Ingress firewall rules for the default network:
+default-allow-icmp
+default-allow-rdp
+default-allow-ssh
+default-allow-internal
+Note: These firewall rules allow ICMP, RDP, and SSH ingress traffic from anywhere (0.0.0.0/0) and all TCP, UDP, and ICMP traffic within the network (10.128.0.0/9). The Targets, Filters, Protocols/ports, and Action columns explain these rules.
+Delete the Firewall rules
+Select all of the default network firewall rules.
+Click Delete.
+Click Delete to confirm the deletion of the firewall rules.
+Delete the default network
+In the Cloud console, in the Navigation menu (), click VPC network > VPC networks.
+Select the default network.
+Click Delete VPC network.
+Click Delete to confirm the deletion of the default network.
+Wait for the network to be deleted before continuing.
+In the left pane, click Routes.
+Notice that there are no routes.
+In the left pane, click Firewall.
+Notice that there are no firewall rules.
+Note: Without a VPC network, there are no routes and no firewall rules!
+Try to create a VM instance
+
+Verify that you cannot create a VM instance without a VPC network.
+
+In the Navigation menu (), click Compute Engine > VM instances.
+Click Create instance.
+Accept the default values and click Create. An error is shown on the Networking tab.
+Click Go to Issues.
+In Network Interfaces, notice the no more networks and no network available errors.
+Click Cancel.
+Note: As expected, you cannot create a VM instance without a VPC network!
+Task 2. Create a VPC network and VM instances
+
+Create a VPC network so that you can create VM instances.
+
+Create an auto mode VPC network with Firewall rules
+
+Replicate the default network by creating an auto mode network.
+
+In the Navigation menu (), click VPC network > VPC networks.
+Click Create VPC network.
+For Name, type mynetwork.
+For Subnet creation mode, click Automatic. Auto mode networks create subnets in each region automatically.
+For Firewall rules, select all available rules. These are the same standard firewall rules that the default network had. The deny-all-ingress and allow-all-egress rules are also displayed, but you cannot check or uncheck them because they are implied. These two rules have a lower Priority (higher integers indicate lower priorities) so that the allow ICMP, custom, RDP and SSH rules are considered first.
+Click Create. When the new network is ready, notice that a subnet was created for each region.
+Explore the IP address range for the subnets in  and .
+Note: If you ever delete the default network, you can quickly re-create it by creating an auto mode network as you just did. After recreating the network, allow-internal changes to allow-custom firewall rule.
+Create a VM instance in 
+
+Create a VM instance in the  region. Selecting a region and zone determines the subnet and assigns the internal IP address from the subnet's IP address range.
+
+In the Navigation menu (), click Compute Engine > VM instances.
+
+Click Create Instance.
+
+Specify the following:
+
+Property	Value (type value or select option as specified)
+Name	mynet-us-vm
+Region	
+Zone	
+
+For Series, select E2.
+
+For Machine type, select e2-micro (2 vCPU, 1 GB memory).
+
+Click Create.
+
+Create a VM instance in 
+
+Create a VM instance in the  region.
+
+Click Create Instance.
+
+Specify the following, and leave the remaining settings as their defaults:
+
+Property	Value (type value or select option as specified)
+Name	mynet-r2-vm
+Region	
+Zone	
+
+For Series, select E2.
+
+For Machine type, select e2-micro (2 vCPU, 1 GB memory).
+
+Click Create.
+
+Note: The External IP addresses for both VM instances are ephemeral. If an instance is stopped, any ephemeral external IP addresses assigned to the instance are released back into the general Compute Engine pool and become available for use by other projects.
+
+When a stopped instance is started again, a new ephemeral external IP address is assigned to the instance. Alternatively, you can reserve a static external IP address, which assigns the address to your project indefinitely until you explicitly release it.
+
+Click Check my progress to verify the objective.Create a VPC network and VM instance
+
+Task 3. Explore the connectivity for VM instances
+
+Explore the connectivity for the VM instances. Specifically, try to SSH to your VM instances using tcp:22, and ping both the internal and external IP addresses of your VM instances using ICMP. Then explore the effects of the firewall rules on connectivity by removing the firewall rules individually.
+
+Verify connectivity for the VM instances
+
+The firewall rules that you created with mynetwork allow ingress SSH and ICMP traffic from within mynetwork (internal IP) and outside that network (external IP).
+
+In the Navigation menu (), click Compute Engine > VM instances.
+Note the external and internal IP addresses for mynet-r2-vm.
+
+For mynet-us-vm, click SSH to launch a terminal and connect.
+
+If an Authorize popup appears, click on Authorize
+
+Note: You can SSH because of the allow-ssh firewall rule, which allows incoming traffic from anywhere (0.0.0.0/0) for tcp:22. The SSH connection works seamlessly because Compute Engine generates an SSH key for you and stores it in one of the following locations:
+
+By default, Compute Engine adds the generated key to project or instance metadata.
+If your account is configured to use OS Login, Compute Engine stores the generated key with your user account.
+
+Alternatively, you can control access to Linux instances by creating SSH keys and editing public SSH key metadata.
+To test connectivity to mynet-r2-vm's internal IP, run the following command, replacing mynet-r2-vm's internal IP:
+
+You can ping mynet-r2-vm's internal IP because of the allow-custom firewall rule.
+
+To test connectivity to mynet-r2-vm's external IP, run the following command, replacing mynet-r2-vm's external IP:
+
+Note: You can SSH to mynet-us-vm and ping mynet-r2-vm's internal and external IP address as expected. Alternatively, you can SSH to mynet-r2-vm and ping mynet-us-vm's internal and external IP address, which also works.
+Remove the allow-icmp firewall rules
+
+Remove the allow-icmp firewall rule and try to ping the internal and external IP address of mynet-r2-vm.
+
+In the Navigation menu (), click VPC network > Firewall.
+
+Select the mynetwork-allow-icmp rule.
+
+Click Delete.
+
+Click Delete to confirm the deletion.
+Wait for the firewall rule to be deleted.
+
+Return to the mynet-us-vm SSH terminal.
+
+To test connectivity to mynet-r2-vm's internal IP, run the following command, replacing mynet-r2-vm's internal IP:
+
+You can ping mynet-r2-vm's internal IP because of the allow-custom firewall rule.
+
+To test connectivity to mynet-r2-vm's external IP, run the following command, replacing mynet-r2-vm's external IP:
+Note: The 100% packet loss indicates that you cannot ping mynet-r2-vm's external IP. This is expected because you deleted the allow-icmp firewall rule!
+Remove the allow-custom firewall rules
+
+Remove the allow-custom firewall rule and try to ping the internal IP address of mynet-r2-vm.
+
+In the Navigation menu (), click VPC network > Firewall.
+Select the mynetwork-allow-custom rule.
+Click Delete.
+Click Delete to confirm the deletion.
+Wait for the firewall rule to be deleted.
+Return to the mynet-us-vm SSH terminal.
+To test connectivity to mynet-r2-vm's internal IP, run the following command, replacing mynet-r2-vm's internal IP:
+Note: The 100% packet loss indicates that you cannot ping mynet-r2-vm's internal IP. This is expected because you deleted the allow-custom firewall rule!
+Close the SSH terminal:
+Remove the allow-ssh firewall rules
+
+Remove the allow-ssh firewall rule and try to SSH to mynet-us-vm.
+
+In the Navigation menu (), click VPC network > Firewall.
+Select the mynetwork-allow-ssh rule.
+Click Delete.
+Click Delete to confirm the deletion.
+Wait for the firewall rule to be deleted.
+In the Navigation menu, click Compute Engine > VM instances.
+For mynet-us-vm, click SSH to launch a terminal and connect.
+Note: The Connection failed message indicates that you cannot SSH to mynet-us-vm because you deleted the allow-ssh firewall rule!
+Task 4. Review
+
+In this lab, you explored the default network along with its subnets, routes, and firewall rules. You deleted the default network and determined that you cannot create any VM instances without a VPC network.
+
+Thus, you created a new auto mode VPC network with subnets, routes, firewall rules, and two VM instances. Then you tested the connectivity for the VM instances and explored the effects of the firewall rules on connectivity.
+
+End your lab
+
+When you have completed your lab, click End Lab. Google Skills removes the resources you’ve used and cleans the account for you.
+
+You will be given an opportunity to rate the lab experience. Select the applicable number of stars, type a comment, and then click Submit.
+
+The number of stars indicates the following:
+
+1 star = Very dissatisfied
+2 stars = Dissatisfied
+3 stars = Neutral
+4 stars = Satisfied
+5 stars = Very satisfied
+
+You can close the dialog box if you don't want to provide feedback.
+
+For feedback, suggestions, or corrections, please use the Support tab.
+
+Copyright 2026 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.
+
+Previous
+Next
+Recertify in 3 simple steps:
+Link your Google Skills and certification account profiles using the same email to get started.
+Instantly see which certifications are eligible for renewal.
+Complete courses and skill badges to renew your certifications automatically.
+
+By clicking "Accept", I consent to share my name, email, and course completion data with Google Skills' certification partner, CM Connect, to receive continuing education credit for certification renewal.
+
+Before you begin
+Labs create a Google Cloud project and resources for a fixed time
+Labs have a time limit and no pause feature. If you end the lab, you'll have to restart from the beginning.
+On the top left of your screen, click Start lab to begin
+
+This content is not currently available
+
+We will notify you via email when it becomes available
+
+Great!
+
+We will contact you via email if it becomes available
+
+One lab at a time
+
+Confirm to end all existing labs and start this one
+
+Use private browsing to run the lab
+Using an Incognito or private browser window is the best way to run this lab. This prevents any conflicts between your personal account and the Student account, which may cause extra charges incurred to your personal account.
+Additional Comments
+
+Complete this quick step to start your lab.
+
+---
+
+## Images
+
+### Image 1
+
+![Google Skills for Partners](https://cdn.qwiklabs.com/lqJbxogu4tSLez1OvjDcIO8rwow6cPLwvrfIdmQLf6U%3D)
+
+### Image 2
+
+![Current streak count](https://cdn.qwiklabs.com/assets/gamification/streak_icon-21476b37c13f49828a5aaa2d86c4d3378cca4117.svg)
+
+### Image 3
+
+![Navigation menu icon](https://cdn.qwiklabs.com/9Fk8NYFp3quE9mF%2FilWF6%2FlXY9OUBi3UWtb2Ne4uXNU%3D)
+
+### Image 4
+
+![Image 4](https://cdn.qwiklabs.com/assets/labs/start_lab-f45aca49782d4033c3ff688160387ac98c66941d.png)
+
+### Image 5
+
+![Image 5](https://cdn.qwiklabs.com/assets/labs/open_incognito_window-3ab2004605e88542dd7732361c3fc0e010c7fb6e.png)
+
+### Image 6
+
+![Image 6](https://cdn.qwiklabs.com/assets/labs/google_sign_in-f9eb84339d08f7db8c5fdfa7ce7726d3531dae80.png)
+
+### Image 7
+
+![Image 7](https://cdn.qwiklabs.com/assets/lab_enablement_notification/disable_lab-47cff1f6bc3610f58767251ff93c2f99cf4f9040.png)
+
+### Image 8
+
+![Image 8](https://cdn.qwiklabs.com/assets/lab_enablement_notification/notifcation_subscribed-2b4f9e51439e1a107488ab58a6e13c3c62ef8855.png)
+
+### Image 9
+
+![Image 9](https://cdn.qwiklabs.com/assets/quota_management/quota_empty-2ba3ec879dea3091828ec9cfa060947292e2c554.png)
+
+### Image 10
+
+![Image 10](https://cdn.qwiklabs.com/assets/quota_management/one_lab_quota-77010e9a83e0a6c7543477868b8b808d70222adb.png)
+
+### Image 11
+
+![Image 11](https://cdn.qwiklabs.com/assets/logo_linkedin-a277effb6f261f5d3b8ad0fc692fb0025ff82eaf.png)
+
+### Image 12
+
+![Image 12](https://cdn.qwiklabs.com/assets/logo_x-2abcf45e0673a8f244a6b686ea7f0189457d4fe3.png)
+
+### Image 13
+
+![Image 13](https://cdn.qwiklabs.com/assets/logo_facebook-5ccdec05e255be16449f837fff607b6d33ae9b87.png)
+
+---
+
+## Main Resources
+
+### youtube
+
+- [Youtube](https://www.youtube.com/@googlecloud)
+
+### videos
+
+- [Course Introduction](https://partner.skills.google/paths/20/course_sessions/39706059/video/630060)
+- [Cloud computing overview](https://partner.skills.google/paths/20/course_sessions/39706059/video/630061)
+- [IaaS and PaaS](https://partner.skills.google/paths/20/course_sessions/39706059/video/630062)
+- [The Google Cloud network](https://partner.skills.google/paths/20/course_sessions/39706059/video/630063)
+- [Environmental impact](https://partner.skills.google/paths/20/course_sessions/39706059/video/630064)
+- [Security](https://partner.skills.google/paths/20/course_sessions/39706059/video/630065)
+- [Open source ecosystems](https://partner.skills.google/paths/20/course_sessions/39706059/video/630066)
+- [Pricing and billing](https://partner.skills.google/paths/20/course_sessions/39706059/video/630067)
+- [Google Cloud resource hierarchy](https://partner.skills.google/paths/20/course_sessions/39706059/video/630069)
+- [Identity and Access Management (IAM)](https://partner.skills.google/paths/20/course_sessions/39706059/video/630070)
+- [Service accounts](https://partner.skills.google/paths/20/course_sessions/39706059/video/630071)
+- [Cloud Identity](https://partner.skills.google/paths/20/course_sessions/39706059/video/630072)
+- [Interacting with Google Cloud](https://partner.skills.google/paths/20/course_sessions/39706059/video/630073)
+- [Virtual Private Cloud networking](https://partner.skills.google/paths/20/course_sessions/39706059/video/630076)
+- [Compute Engine](https://partner.skills.google/paths/20/course_sessions/39706059/video/630077)
+- [Scaling virtual machines](https://partner.skills.google/paths/20/course_sessions/39706059/video/630078)
+- [Important VPC compatibilities](https://partner.skills.google/paths/20/course_sessions/39706059/video/630079)
+- [Cloud Load Balancing](https://partner.skills.google/paths/20/course_sessions/39706059/video/630080)
+- [Cloud DNS and Cloud CDN](https://partner.skills.google/paths/20/course_sessions/39706059/video/630081)
+- [Connecting networks to Google VPC](https://partner.skills.google/paths/20/course_sessions/39706059/video/630082)
+- [Google Cloud storage options](https://partner.skills.google/paths/20/course_sessions/39706059/video/630085)
+- [Cloud Storage](https://partner.skills.google/paths/20/course_sessions/39706059/video/630086)
+- [Cloud Storage: Storage classes and data transfer](https://partner.skills.google/paths/20/course_sessions/39706059/video/630087)
+- [Cloud SQL](https://partner.skills.google/paths/20/course_sessions/39706059/video/630088)
+- [Spanner](https://partner.skills.google/paths/20/course_sessions/39706059/video/630089)
+- [Firestore](https://partner.skills.google/paths/20/course_sessions/39706059/video/630090)
+- [Bigtable](https://partner.skills.google/paths/20/course_sessions/39706059/video/630091)
+- [Comparing storage options](https://partner.skills.google/paths/20/course_sessions/39706059/video/630092)
+- [Introduction to containers](https://partner.skills.google/paths/20/course_sessions/39706059/video/630095)
+- [Kubernetes](https://partner.skills.google/paths/20/course_sessions/39706059/video/630096)
+- [Google Kubernetes Engine](https://partner.skills.google/paths/20/course_sessions/39706059/video/630097)
+- [Cloud Run](https://partner.skills.google/paths/20/course_sessions/39706059/video/630099)
+- [Development in the cloud](https://partner.skills.google/paths/20/course_sessions/39706059/video/630100)
+- [Prompt Engineering](https://partner.skills.google/paths/20/course_sessions/39706059/video/630103)
+- [Course summary](https://partner.skills.google/paths/20/course_sessions/39706059/video/630105)
+- [Resource](https://partner.skills.google/paths/20/course_sessions/39706059/video/630082)
+
+### labs
+
+- [Resource](https://support.google.com/qwiklabs/contact/Google_Skills_Partner)
+- [Google Cloud Fundamentals: Getting Started with Cloud Marketplace](https://partner.skills.google/paths/20/course_sessions/39706059/labs/630074)
+- [Get Started with Virtual Private Cloud Networking and Compute Engine](https://partner.skills.google/paths/20/course_sessions/39706059/labs/630083)
+- [Google Cloud Fundamentals: Getting Started with Cloud Storage and Cloud SQL](https://partner.skills.google/paths/20/course_sessions/39706059/labs/630093)
+- [Hello Cloud Run](https://partner.skills.google/paths/20/course_sessions/39706059/labs/630101)
+
+### external_links
+
+- [Resource](https://partner.skills.google/)
+- [Professional Cloud DevOps Engineer Certification](https://partner.skills.google/paths/20)
+- [Google Cloud Fundamentals: Core Infrastructure](https://partner.skills.google/paths/20/course_templates/60)
+- [each Google Cloud region](https://cloud.google.com/compute/docs/regions-zones/#available)
+- [Dashboard](https://partner.skills.google/)
+- [Catalog](https://partner.skills.google/catalog)
+- [Paths](https://partner.skills.google/paths)
+- [Subscriptions](https://partner.skills.google/subscriptions)
+- [Activities](https://partner.skills.google/profile/stay_on_track)
+- [Achievements](https://partner.skills.google/profile/badges)
+- [https://partner.skills.google/catalog_lab/4742](https://partner.skills.google/catalog_lab/4742)
+- [Resource](https://x.com/intent/tweet?text=Learn%20cloud%20tech%20through%20hands-on%20training%20on%20%23GoogleSkills%21&url=https%3A%2F%2Fpartner.skills.google%2Fcatalog_lab%2F4742%3Futm_medium%3Dsocial%26utm_source%3Dx%26utm_campaign%3Dql-social-share&hashtags=)
+- [Resource](https://partner.skills.google/profile/activity)
+- [Resource](https://partner.skills.google/my_account/profile)
+- [Programs](https://partner.skills.google/my_account/programs)
+- [Overview](https://partner.skills.google/paths/20/course_templates/60)
+- [Quiz](https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630068)
+- [Quiz](https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630075)
+- [Quiz](https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630084)
+- [Quiz](https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630094)
+- [Quiz](https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630098)
+- [Quiz](https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630102)
+- [Quiz](https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630104)
+- [Course resources](https://partner.skills.google/paths/20/course_sessions/39706059/documents/630106)
+- [Claim credential](https://partner.skills.google/paths/20/course_templates/60/badge)
+- [Course Survey
+      Recommended](https://partner.skills.google/paths/20/course_templates/60/course_surveys/0)
+- [Resource](https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630084)
+- [Resource](https://partner.skills.google/focuses/816163890/set_up_lab_forward_url?course_template=60&parent=course_session)
+- [Resource](https://partner.skills.google/paths/20/course_templates/60/preview)
+
+---
+
+## Headings
+
+- **H4**: Checkpoints
+- **H1**: Get Started with Virtual Private Cloud Networking and Compute Engine
+- **H2**: Overview
+- **H3**: Objectives
+- **H2**: Setup and requirements
+- **H2**: Task 1. Explore the default network
+- **H3**: View the subnets
+- **H3**: View the routes
+- **H3**: View the Firewall rules
+- **H3**: Delete the Firewall rules
+- **H3**: Delete the default network
+- **H3**: Try to create a VM instance
+- **H2**: Task 2. Create a VPC network and VM instances
+- **H3**: Create an auto mode VPC network with Firewall rules
+- **H3**: Create a VM instance in
+- **H3**: Create a VM instance in
+- **H2**: Task 3. Explore the connectivity for VM instances
+- **H3**: Verify connectivity for the VM instances
+- **H3**: Remove the allow-icmp firewall rules
+- **H3**: Remove the allow-custom firewall rules
+- **H3**: Remove the allow-ssh firewall rules
+- **H2**: Task 4. Review
+- **H2**: End your lab
+- **H2**: Recertify in 3 simple steps:
+- **H1**: Before you begin
+- **H1**: Use private browsing
+- **H1**: Sign in to the Console
+- **H1**: Score Details
+- **H1**: Use private browsing to run the lab
+- **H1**: How satisfied are you with this lab?*
+- **H1**: Are you sure? You may not be able to restart the lab, and you'll need to start from the beginning if you do.
+- **H1**: Verify you're human
+- **H1**: A newer version of this course is available. Your progress will carry over if you choose to upgrade. However, your completion percentage may change if the new version has added or removed any learning activities. Click the preview button to see the course changes before upgrading.
+---
+
+## Raw Files
+
+- [readable_page.html](readable_page.html)
+- [page.html](page.html)
+- [page_text.txt](page_text.txt)
+- [session.json](session.json)
+- [headings.json](headings.json)
+- [links.json](links.json)
+- [images.json](images.json)
+- [resources.json](resources.json)
+- [youtube_links.json](youtube_links.json)
+- [transcript.json](transcript.json)
+- [transcript.txt](transcript.txt)
+- [plugin_extra.json](plugin_extra.json)
+- [screenshot.png](screenshot.png)
+
+## Plugin Extra Data
+
+```json
+{
+  "content_kind": "lab"
+}
+```

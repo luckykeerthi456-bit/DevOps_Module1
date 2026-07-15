@@ -1,0 +1,66 @@
+[
+    {
+        "timestamp": "00:00",
+        "text": "Google Cloud’s second core storage option is Cloud SQL."
+    },
+    {
+        "timestamp": "00:04",
+        "text": "Cloud SQL offers fully managed relational databases, including Cloud SQL for MySQL, Cloud SQL for PostgreSQL, and Cloud SQL for SQL Server as a service."
+    },
+    {
+        "timestamp": "00:15",
+        "text": "It’s designed to hand off mundane, but necessary and often time-consuming, tasks to Google— like applying"
+    },
+    {
+        "timestamp": "00:21",
+        "text": "patches and updates, managing backups, and configuring replications—so your focus can be on building great applications."
+    },
+    {
+        "timestamp": "00:31",
+        "text": "Cloud SQL doesn't require any software installation or maintenance."
+    },
+    {
+        "timestamp": "00:35",
+        "text": "It can scale up to 128 processor cores, 864 GB of RAM, and 64 TB of storage."
+    },
+    {
+        "timestamp": "00:44",
+        "text": "It supports automatic replication scenarios, such as from a Cloud SQL primary instance, an external primary instance, and external MySQL instances."
+    },
+    {
+        "timestamp": "00:56",
+        "text": "Cloud SQL supports managed backups, so backed-up data is securely stored and accessible if a restore is required."
+    },
+    {
+        "timestamp": "01:03",
+        "text": "The cost of an instance covers seven backups."
+    },
+    {
+        "timestamp": "01:06",
+        "text": "Cloud SQL encrypts customer data when on Google’s internal networks and when stored in database tables, temporary files, and backups."
+    },
+    {
+        "timestamp": "01:15",
+        "text": "And it includes a network firewall, which controls network access to each database instance."
+    },
+    {
+        "timestamp": "01:22",
+        "text": "A benefit of Cloud SQL instances is that they are accessible by other Google Cloud services, and even external services."
+    },
+    {
+        "timestamp": "01:29",
+        "text": "Cloud SQL can be used with App Engine using standard drivers like Connector/J for Java or MySQLdb for Python."
+    },
+    {
+        "timestamp": "01:38",
+        "text": "Compute Engine instances can be authorized to access Cloud SQL instances and configure the Cloud SQL instance to be in the same zone as your virtual machine."
+    },
+    {
+        "timestamp": "01:48",
+        "text": "Cloud SQL also supports other applications and tools that you might use, like SQL Workbench,Toad, and other external applications using standard MySQL drivers."
+    },
+    {
+        "timestamp": "00:00",
+        "text": "Google Cloud’s second core storage option is Cloud SQL. 00:04 Cloud SQL offers fully managed relational databases, including Cloud SQL for MySQL, Cloud SQL for PostgreSQL, and Cloud SQL for SQL Server as a service. 00:15 It’s designed to hand off mundane, but necessary and often time-consuming, tasks to Google— like applying 00:21 patches and updates, managing backups, and configuring replications—so your focus can be on building great applications. 00:31 Cloud SQL doesn't require any software installation or maintenance. 00:35 It can scale up to 128 processor cores, 864 GB of RAM, and 64 TB of storage. 00:44 It supports automatic replication scenarios, such as from a Cloud SQL primary instance, an external primary instance, and external MySQL instances. 00:56 Cloud SQL supports managed backups, so backed-up data is securely stored and accessible if a restore is required. 01:03 The cost of an instance covers seven backups. 01:06 Cloud SQL encrypts customer data when on Google’s internal networks and when stored in database tables, temporary files, and backups. 01:15 And it includes a network firewall, which controls network access to each database instance. 01:22 A benefit of Cloud SQL instances is that they are accessible by other Google Cloud services, and even external services. 01:29 Cloud SQL can be used with App Engine using standard drivers like Connector/J for Java or MySQLdb for Python. 01:38 Compute Engine instances can be authorized to access Cloud SQL instances and configure the Cloud SQL instance to be in the same zone as your virtual machine. 01:48 Cloud SQL also supports other applications and tools that you might use, like SQL Workbench,Toad, and other external applications using standard MySQL drivers."
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "timestamp": "00:00",
+        "text": "Google Cloud’s fourth core storage option is Firestore."
+    },
+    {
+        "timestamp": "00:04",
+        "text": "Firestore is a flexible, horizontally scalable, NoSQL cloud database for mobile, web, and server development."
+    },
+    {
+        "timestamp": "00:13",
+        "text": "With Firestore, data is stored in documents and then organized into collections."
+    },
+    {
+        "timestamp": "00:18",
+        "text": "Documents can contain complex nested objects in addition to subcollections."
+    },
+    {
+        "timestamp": "00:21",
+        "text": "Each document contains a set of key-value pairs."
+    },
+    {
+        "timestamp": "00:22",
+        "text": "For example, a document to represent a user has the keys for the firstname and lastname with the associated values."
+    },
+    {
+        "timestamp": "00:26",
+        "text": "Firestore’s NoSQL queries can then be used to retrieve individual, specific documents or to retrieve all the documents in a collection that match your query parameters."
+    },
+    {
+        "timestamp": "00:34",
+        "text": "Queries can include multiple, chained filters and combine filtering and sorting options."
+    },
+    {
+        "timestamp": "00:39",
+        "text": "They're also indexed by default, so query performance is proportional to the size of the result set, not the dataset."
+    },
+    {
+        "timestamp": "00:47",
+        "text": "Firestore uses data synchronization to update data on any connected device."
+    },
+    {
+        "timestamp": "00:52",
+        "text": "However, it's also designed to make simple, one-time fetch queries efficiently."
+    },
+    {
+        "timestamp": "00:58",
+        "text": "It caches data that an app is actively using, so the app can write, read, listen to, and query data even if the device is offline."
+    },
+    {
+        "timestamp": "01:07",
+        "text": "When the device comes back online, Firestore synchronizes any local changes back to Firestore."
+    },
+    {
+        "timestamp": "01:13",
+        "text": "Firestore leverages Google Cloud’s powerful infrastructure: automatic multi-region data replication, strong consistency guarantees, atomic batch operations, and real transaction support."
+    },
+    {
+        "timestamp": "00:00",
+        "text": "Google Cloud’s fourth core storage option is Firestore. 00:04 Firestore is a flexible, horizontally scalable, NoSQL cloud database for mobile, web, and server development. 00:13 With Firestore, data is stored in documents and then organized into collections. 00:18 Documents can contain complex nested objects in addition to subcollections. 00:21 Each document contains a set of key-value pairs. 00:22 For example, a document to represent a user has the keys for the firstname and lastname with the associated values. 00:26 Firestore’s NoSQL queries can then be used to retrieve individual, specific documents or to retrieve all the documents in a collection that match your query parameters. 00:34 Queries can include multiple, chained filters and combine filtering and sorting options. 00:39 They're also indexed by default, so query performance is proportional to the size of the result set, not the dataset. 00:47 Firestore uses data synchronization to update data on any connected device. 00:52 However, it's also designed to make simple, one-time fetch queries efficiently. 00:58 It caches data that an app is actively using, so the app can write, read, listen to, and query data even if the device is offline. 01:07 When the device comes back online, Firestore synchronizes any local changes back to Firestore. 01:13 Firestore leverages Google Cloud’s powerful infrastructure: automatic multi-region data replication, strong consistency guarantees, atomic batch operations, and real transaction support."
+    }
+]

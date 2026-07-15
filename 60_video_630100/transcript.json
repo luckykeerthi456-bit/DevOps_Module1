@@ -1,0 +1,70 @@
+[
+    {
+        "timestamp": "00:00",
+        "text": "Many applications contain event-driven parts."
+    },
+    {
+        "timestamp": "00:03",
+        "text": "For example, an application that lets users upload images."
+    },
+    {
+        "timestamp": "00:07",
+        "text": "When that event takes place, the image might need to be processed in a few different ways, like converting"
+    },
+    {
+        "timestamp": "00:12",
+        "text": "the image to a standard format, converting a thumbnail into different sizes, and storing each new file in a repository."
+    },
+    {
+        "timestamp": "00:22",
+        "text": "This function could be integrated into the application, but then you’d have to provide compute resources for it–whether it happens once a millisecond or once a day."
+    },
+    {
+        "timestamp": "00:31",
+        "text": "With Cloud Run functions, you write a single-purpose function that completes the necessary image manipulations and then arrange for it to automatically run whenever a new image is uploaded."
+    },
+    {
+        "timestamp": "00:43",
+        "text": "Cloud Run functions is a lightweight, event-based, asynchronous compute solution that allows you to create small, single-purpose"
+    },
+    {
+        "timestamp": "00:49",
+        "text": "functions that respond to cloud events, without the need to manage a server or a runtime environment."
+    },
+    {
+        "timestamp": "00:57",
+        "text": "These functions can be used to construct application workflows from individual business logic tasks."
+    },
+    {
+        "timestamp": "01:03",
+        "text": "Cloud Run functions can also connect and extend cloud services."
+    },
+    {
+        "timestamp": "01:08",
+        "text": "You’re billed to the nearest 100 milliseconds, but only while your code is running."
+    },
+    {
+        "timestamp": "01:14",
+        "text": "Cloud Run functions supports writing source code in a number of programming languages."
+    },
+    {
+        "timestamp": "01:19",
+        "text": "These include Node.js, Python, Go, Java, ."
+    },
+    {
+        "timestamp": "01:24",
+        "text": "Net Core, Ruby, and PHP."
+    },
+    {
+        "timestamp": "01:29",
+        "text": "For more information about the supported specific version, refer to the runtimes documentation."
+    },
+    {
+        "timestamp": "01:36",
+        "text": "Events from Cloud Storage and Pub/Sub can trigger Cloud Run functions asynchronously, or you can use HTTP invocation for synchronous execution."
+    },
+    {
+        "timestamp": "00:00",
+        "text": "Many applications contain event-driven parts. 00:03 For example, an application that lets users upload images. 00:07 When that event takes place, the image might need to be processed in a few different ways, like converting 00:12 the image to a standard format, converting a thumbnail into different sizes, and storing each new file in a repository. 00:22 This function could be integrated into the application, but then you’d have to provide compute resources for it–whether it happens once a millisecond or once a day. 00:31 With Cloud Run functions, you write a single-purpose function that completes the necessary image manipulations and then arrange for it to automatically run whenever a new image is uploaded. 00:43 Cloud Run functions is a lightweight, event-based, asynchronous compute solution that allows you to create small, single-purpose 00:49 functions that respond to cloud events, without the need to manage a server or a runtime environment. 00:57 These functions can be used to construct application workflows from individual business logic tasks. 01:03 Cloud Run functions can also connect and extend cloud services. 01:08 You’re billed to the nearest 100 milliseconds, but only while your code is running. 01:14 Cloud Run functions supports writing source code in a number of programming languages. 01:19 These include Node.js, Python, Go, Java, . 01:24 Net Core, Ruby, and PHP. 01:29 For more information about the supported specific version, refer to the runtimes documentation. 01:36 Events from Cloud Storage and Pub/Sub can trigger Cloud Run functions asynchronously, or you can use HTTP invocation for synchronous execution."
+    }
+]

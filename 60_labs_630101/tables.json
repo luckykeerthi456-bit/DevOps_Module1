@@ -1,0 +1,3 @@
+[
+    "Command -->\tAction\t.\tCommand -->\tAction\nmkdir (make directory)\tcreate a new folder\t.\tcd (change directory)\tchange location to another folder\nls (list )\tlist files and folders in the directory\t.\tcat (concatenate)\tread contents of a file without using an editor\napt-get update\tupdate package manager library\t.\tping\tsignal to test reachability of a host\nmv (move )\tmoves a file\t.\tcp (copy)\tmakes a file copy\npwd (present working directory )\treturns your current location\t.\tsudo (super user do)\tgives higher administration privileges"
+]

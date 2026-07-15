@@ -1,0 +1,154 @@
+Transcript
+
+00:00
+Nine of Google’s services have more than one billion users each, and so you can be assured that security is always on the minds of Google's employees.
+
+00:08
+Design for security is prevalent throughout the infrastructure that Google Cloud and Google services run on.
+
+00:15
+Let's talk about a few ways Google works to keep customers' data safe.
+
+00:20
+The security infrastructure can be explained in progressive layers, starting from the physical security of our data centers, continuing on to how the
+
+00:27
+hardware and software that underlie the infrastructure are secured, and finally, describing the technical constraints and processes in place to support operational security.
+
+00:39
+We begin with the Hardware infrastructure layer which comprises three key security features: The first is hardware design and provenance.
+
+00:49
+Both the server boards and the networking equipment in Google data centers are custom-designed by Google.
+
+00:56
+Google also designs custom chips, including a hardware security chip that's currently being deployed on both servers and peripherals.
+
+01:05
+The next feature is a secure boot stack.
+
+01:09
+Google server machines use a variety of technologies to ensure that they are booting the correct
+
+01:14
+software stack, such as cryptographic signatures over the BIOS, bootloader, kernel, and base operating system image.
+
+01:23
+This layer's final feature is premises security.
+
+01:27
+Google designs and builds its own data centers, which incorporate multiple layers of physical security protections.
+
+01:34
+Access to these data centers is limited to only a very small number of Google employees.
+
+01:40
+Google additionally hosts some servers in third-party data centers, where we ensure that there are
+
+01:44
+Google-controlled physical security measures on top of the security layers provided by the data center operator.
+
+01:51
+Next is the Service deployment layer, where the key feature is encryption of inter-service communication.
+
+01:57
+Google’s infrastructure provides cryptographic privacy and integrity for remote procedure call (“RPC”) data on the network.
+
+02:05
+Google’s services communicate with each other using RPC calls.
+
+02:08
+The infrastructure automatically encrypts all infrastructure RPC traffic that goes between data centers.
+
+02:17
+Google has started to deploy hardware cryptographic accelerators that will allow it to extend this default encryption to all infrastructure RPC traffic inside Google data centers.
+
+02:28
+Then we have the User identity layer.
+
+02:31
+Google’s central identity service, which usually manifests to end users as the Google login page, goes beyond asking for a simple username and password.
+
+02:41
+The service also intelligently challenges users for additional information based on risk factors such as
+
+02:45
+whether they have logged in from the same device or a similar location in the past.
+
+02:51
+Users can also employ secondary factors when signing in, including devices based on the Universal 2nd Factor (U2F) open standard.
+
+03:01
+On the Storage services layer we find the encryption at rest security feature.
+
+03:07
+Most applications at Google access physical storage (in other words, “file storage”) indirectly via storage
+
+03:12
+services, and encryption using centrally managed keys is applied at the layer of these storage services.
+
+03:21
+Google also enables hardware encryption support in hard drives and SSDs.
+
+03:25
+The next layer up is the Internet communication layer, and this comprises two key security features.
+
+03:33
+Google services that are being made available on the internet, register themselves with an infrastructure service called the Google Front End, which ensures that all TLS connections
+
+03:42
+are ended using a public-private key pair and an X.509 certificate from a Certified Authority (CA), as well as following best practices such as supporting perfect forward secrecy.
+
+03:54
+The GFE additionally applies protections against Denial of Service attacks.
+
+04:00
+Also provided is Denial of Service (“DoS”) protection.
+
+04:04
+The sheer scale of its infrastructure enables Google to simply absorb many DoS attacks.
+
+04:09
+Google also has multi-tier, multi-layer DoS protections that further reduce the risk of any DoS impact on a service running behind a GFE.
+
+04:20
+The final layer is Google's Operational security layer which provides four key features.
+
+04:27
+First is intrusion detection.
+
+04:29
+Rules and machine intelligence give Google’s operational security teams warnings of possible incidents.
+
+04:36
+Google conducts Red Team exercises to measure and improve the effectiveness of its detection and response mechanisms.
+
+04:44
+Next is reducing insider risk.
+
+04:46
+Google aggressively limits and actively monitors the activities of employees who have been granted administrative access to the infrastructure.
+
+04:54
+Then there’s employee U2F use.
+
+04:57
+To guard against phishing attacks against Google employees, employee accounts require use of U2F-compatible Security Keys.
+
+05:05
+Finally, there are stringent software development practices.
+
+05:10
+Google employs central source control and requires two-party review of new code.
+
+05:16
+Google also provides its developers libraries that prevent them from introducing certain classes of security bugs.
+
+05:22
+Additionally, Google runs a Vulnerability Rewards Program where we pay anyone who is able to discover and inform us of bugs in our infrastructure or applications.
+
+05:31
+You can learn more about Google’s technical-infrastructure security at cloud.google.com/security/security-design.
+
+00:00
+Nine of Google’s services have more than one billion users each, and so you can be assured that security is always on the minds of Google's employees. 00:08 Design for security is prevalent throughout the infrastructure that Google Cloud and Google services run on. 00:15 Let's talk about a few ways Google works to keep customers' data safe. 00:20 The security infrastructure can be explained in progressive layers, starting from the physical security of our data centers, continuing on to how the 00:27 hardware and software that underlie the infrastructure are secured, and finally, describing the technical constraints and processes in place to support operational security. 00:39 We begin with the Hardware infrastructure layer which comprises three key security features: The first is hardware design and provenance. 00:49 Both the server boards and the networking equipment in Google data centers are custom-designed by Google. 00:56 Google also designs custom chips, including a hardware security chip that's currently being deployed on both servers and peripherals. 01:05 The next feature is a secure boot stack. 01:09 Google server machines use a variety of technologies to ensure that they are booting the correct 01:14 software stack, such as cryptographic signatures over the BIOS, bootloader, kernel, and base operating system image. 01:23 This layer's final feature is premises security. 01:27 Google designs and builds its own data centers, which incorporate multiple layers of physical security protections. 01:34 Access to these data centers is limited to only a very small number of Google employees. 01:40 Google additionally hosts some servers in third-party data centers, where we ensure that there are 01:44 Google-controlled physical security measures on top of the security layers provided by the data center operator. 01:51 Next is the Service deployment layer, where the key feature is encryption of inter-service communication. 01:57 Google’s infrastructure provides cryptographic privacy and integrity for remote procedure call (“RPC”) data on the network. 02:05 Google’s services communicate with each other using RPC calls. 02:08 The infrastructure automatically encrypts all infrastructure RPC traffic that goes between data centers. 02:17 Google has started to deploy hardware cryptographic accelerators that will allow it to extend this default encryption to all infrastructure RPC traffic inside Google data centers. 02:28 Then we have the User identity layer. 02:31 Google’s central identity service, which usually manifests to end users as the Google login page, goes beyond asking for a simple username and password. 02:41 The service also intelligently challenges users for additional information based on risk factors such as 02:45 whether they have logged in from the same device or a similar location in the past. 02:51 Users can also employ secondary factors when signing in, including devices based on the Universal 2nd Factor (U2F) open standard. 03:01 On the Storage services layer we find the encryption at rest security feature. 03:07 Most applications at Google access physical storage (in other words, “file storage”) indirectly via storage 03:12 services, and encryption using centrally managed keys is applied at the layer of these storage services. 03:21 Google also enables hardware encryption support in hard drives and SSDs. 03:25 The next layer up is the Internet communication layer, and this comprises two key security features. 03:33 Google services that are being made available on the internet, register themselves with an infrastructure service called the Google Front End, which ensures that all TLS connections 03:42 are ended using a public-private key pair and an X.509 certificate from a Certified Authority (CA), as well as following best practices such as supporting perfect forward secrecy. 03:54 The GFE additionally applies protections against Denial of Service attacks. 04:00 Also provided is Denial of Service (“DoS”) protection. 04:04 The sheer scale of its infrastructure enables Google to simply absorb many DoS attacks. 04:09 Google also has multi-tier, multi-layer DoS protections that further reduce the risk of any DoS impact on a service running behind a GFE. 04:20 The final layer is Google's Operational security layer which provides four key features. 04:27 First is intrusion detection. 04:29 Rules and machine intelligence give Google’s operational security teams warnings of possible incidents. 04:36 Google conducts Red Team exercises to measure and improve the effectiveness of its detection and response mechanisms. 04:44 Next is reducing insider risk. 04:46 Google aggressively limits and actively monitors the activities of employees who have been granted administrative access to the infrastructure. 04:54 Then there’s employee U2F use. 04:57 To guard against phishing attacks against Google employees, employee accounts require use of U2F-compatible Security Keys. 05:05 Finally, there are stringent software development practices. 05:10 Google employs central source control and requires two-party review of new code. 05:16 Google also provides its developers libraries that prevent them from introducing certain classes of security bugs. 05:22 Additionally, Google runs a Vulnerability Rewards Program where we pay anyone who is able to discover and inform us of bugs in our infrastructure or applications. 05:31 You can learn more about Google’s technical-infrastructure security at cloud.google.com/security/security-design.

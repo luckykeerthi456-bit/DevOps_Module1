@@ -1,0 +1,134 @@
+[
+    {
+        "level": "h4",
+        "text": "Checkpoints"
+    },
+    {
+        "level": "h1",
+        "text": "Get Started with Virtual Private Cloud Networking and Compute Engine"
+    },
+    {
+        "level": "h2",
+        "text": "Overview"
+    },
+    {
+        "level": "h3",
+        "text": "Objectives"
+    },
+    {
+        "level": "h2",
+        "text": "Setup and requirements"
+    },
+    {
+        "level": "h2",
+        "text": "Task 1. Explore the default network"
+    },
+    {
+        "level": "h3",
+        "text": "View the subnets"
+    },
+    {
+        "level": "h3",
+        "text": "View the routes"
+    },
+    {
+        "level": "h3",
+        "text": "View the Firewall rules"
+    },
+    {
+        "level": "h3",
+        "text": "Delete the Firewall rules"
+    },
+    {
+        "level": "h3",
+        "text": "Delete the default network"
+    },
+    {
+        "level": "h3",
+        "text": "Try to create a VM instance"
+    },
+    {
+        "level": "h2",
+        "text": "Task 2. Create a VPC network and VM instances"
+    },
+    {
+        "level": "h3",
+        "text": "Create an auto mode VPC network with Firewall rules"
+    },
+    {
+        "level": "h3",
+        "text": "Create a VM instance in"
+    },
+    {
+        "level": "h3",
+        "text": "Create a VM instance in"
+    },
+    {
+        "level": "h2",
+        "text": "Task 3. Explore the connectivity for VM instances"
+    },
+    {
+        "level": "h3",
+        "text": "Verify connectivity for the VM instances"
+    },
+    {
+        "level": "h3",
+        "text": "Remove the allow-icmp firewall rules"
+    },
+    {
+        "level": "h3",
+        "text": "Remove the allow-custom firewall rules"
+    },
+    {
+        "level": "h3",
+        "text": "Remove the allow-ssh firewall rules"
+    },
+    {
+        "level": "h2",
+        "text": "Task 4. Review"
+    },
+    {
+        "level": "h2",
+        "text": "End your lab"
+    },
+    {
+        "level": "h2",
+        "text": "Recertify in 3 simple steps:"
+    },
+    {
+        "level": "h1",
+        "text": "Before you begin"
+    },
+    {
+        "level": "h1",
+        "text": "Use private browsing"
+    },
+    {
+        "level": "h1",
+        "text": "Sign in to the Console"
+    },
+    {
+        "level": "h1",
+        "text": "Score Details"
+    },
+    {
+        "level": "h1",
+        "text": "Use private browsing to run the lab"
+    },
+    {
+        "level": "h1",
+        "text": "How satisfied are you with this lab?*"
+    },
+    {
+        "level": "h1",
+        "text": "Are you sure? You may not be able to restart the lab, and you'll need to start from the beginning if you do."
+    },
+    {
+        "level": "h1",
+        "text": "Verify you're human"
+    },
+    {
+        "level": "h1",
+        "text": "A newer version of this course is available. Your progress will carry over if you choose to upgrade. However, your completion percentage may change if the new version has added or removed any learning activities. Click the preview button to see the course changes before upgrading."
+    }
+]

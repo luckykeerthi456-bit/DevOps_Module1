@@ -1,0 +1,214 @@
+[
+    {
+        "timestamp": "00:00",
+        "text": "In this section of the course we’ll look at the functional structure of Google Cloud."
+    },
+    {
+        "timestamp": "00:05",
+        "text": "Google Cloud’s resource hierarchy contains four levels, and starting from the bottom up they are: resources, projects, folders, and an organization node."
+    },
+    {
+        "timestamp": "00:17",
+        "text": "At the first level are resources."
+    },
+    {
+        "timestamp": "00:20",
+        "text": "These represent virtual machines, Cloud Storage buckets, tables in BigQuery, or anything else in Google Cloud."
+    },
+    {
+        "timestamp": "00:29",
+        "text": "Resources are organized into projects, which sit on the second level."
+    },
+    {
+        "timestamp": "00:34",
+        "text": "Projects can be organized into folders, or even subfolders."
+    },
+    {
+        "timestamp": "00:37",
+        "text": "These sit at the third level."
+    },
+    {
+        "timestamp": "00:40",
+        "text": "And then at the top level is an organization node, which encompasses all the projects, folders, and resources in your organization."
+    },
+    {
+        "timestamp": "00:47",
+        "text": "It’s important to understand this resource hierarchy because it directly relates to how policies are managed and applied when you use Google Cloud."
+    },
+    {
+        "timestamp": "00:57",
+        "text": "Policies can be defined at the project, folder, and organization node levels."
+    },
+    {
+        "timestamp": "01:02",
+        "text": "Some Google Cloud services allow policies to be applied to individual resources, too."
+    },
+    {
+        "timestamp": "01:09",
+        "text": "Policies are also inherited downward."
+    },
+    {
+        "timestamp": "01:11",
+        "text": "This means that if you apply a policy to a folder, it will also apply to all of the projects within that folder."
+    },
+    {
+        "timestamp": "01:17",
+        "text": "Let’s take a look at the second level of the resource hierarchy, projects, in a little more detail."
+    },
+    {
+        "timestamp": "01:24",
+        "text": "Projects are the basis for enabling and using Google Cloud services, like managing APIs, enabling billing, adding and removing collaborators, and enabling other Google services."
+    },
+    {
+        "timestamp": "01:36",
+        "text": "Each project is a separate entity under the organization node, and each resource belongs to exactly one project."
+    },
+    {
+        "timestamp": "01:44",
+        "text": "Projects can have different owners and users because they’re billed and managed separately."
+    },
+    {
+        "timestamp": "01:49",
+        "text": "Each Google Cloud project has three identifying attributes: a project ID, a project name, and a project number."
+    },
+    {
+        "timestamp": "01:57",
+        "text": "The project ID is a globally unique identifier assigned by Google that can’t be changed after creation."
+    },
+    {
+        "timestamp": "02:04",
+        "text": "They’re what we refer to as being immutable."
+    },
+    {
+        "timestamp": "02:08",
+        "text": "Project IDs are used in different contexts to inform Google Cloud of the exact project to work with."
+    },
+    {
+        "timestamp": "02:15",
+        "text": "Project names, however, are user-created."
+    },
+    {
+        "timestamp": "02:17",
+        "text": "They don’t have to be unique and they can be changed at any time, so they are not immutable."
+    },
+    {
+        "timestamp": "02:23",
+        "text": "Google Cloud also assigns each project a unique project number."
+    },
+    {
+        "timestamp": "02:27",
+        "text": "It’s helpful to know that these Google-generated numbers exist, but we won’t explore them much in this course."
+    },
+    {
+        "timestamp": "02:32",
+        "text": "They’re mainly used internally by Google Cloud to keep track of resources."
+    },
+    {
+        "timestamp": "02:38",
+        "text": "Google Cloud’s Resource Manager tool is designed to programmatically help you manage projects."
+    },
+    {
+        "timestamp": "02:43",
+        "text": "It’s an API that can gather a list of all the projects associated with an account, create new projects, update existing projects, and delete projects."
+    },
+    {
+        "timestamp": "02:53",
+        "text": "It can even recover projects that were previously deleted,and can be accessed through the RPC API and the REST API."
+    },
+    {
+        "timestamp": "03:02",
+        "text": "The third level of the Google Cloud resource hierarchy is folders."
+    },
+    {
+        "timestamp": "03:06",
+        "text": "Folders let you assign policies to resources at a level of granularity you choose."
+    },
+    {
+        "timestamp": "03:11",
+        "text": "The resources in a folder inherit policies and permissions assigned to that folder."
+    },
+    {
+        "timestamp": "03:16",
+        "text": "A folder can contain projects, other folders, or a combination of both."
+    },
+    {
+        "timestamp": "03:22",
+        "text": "You can use folders to group projects under an organization in a hierarchy."
+    },
+    {
+        "timestamp": "03:26",
+        "text": "For example, your organization might contain multiple departments, each with its own set Google Cloud resources."
+    },
+    {
+        "timestamp": "03:33",
+        "text": "Folders allow you to group these resources on a per-department basis."
+    },
+    {
+        "timestamp": "03:38",
+        "text": "Folders also give teams the ability to delegate administrative rights so that they can work independently."
+    },
+    {
+        "timestamp": "03:44",
+        "text": "As previously mentioned, the resources in a folder inherit policies and permissions from that folder."
+    },
+    {
+        "timestamp": "03:51",
+        "text": "For example, if you have two different projects that are administered by the same team, you can put policies into a common folder so they have the same permissions."
+    },
+    {
+        "timestamp": "04:01",
+        "text": "Doing it the other way--putting duplicate copies of those policies on both projects–could be tedious and error-prone."
+    },
+    {
+        "timestamp": "04:08",
+        "text": "if you needed to change permissions on both resources, you would now have to do that in two places instead of just one."
+    },
+    {
+        "timestamp": "04:15",
+        "text": "To use folders, you must have an organization node, which is the very topmost resource in the Google Cloud hierarchy."
+    },
+    {
+        "timestamp": "04:21",
+        "text": "Everything else attached to that account goes under this node, which includes folders, projects, and other resources."
+    },
+    {
+        "timestamp": "04:30",
+        "text": "There are some special roles associated with this top-level organization node."
+    },
+    {
+        "timestamp": "04:34",
+        "text": "For example, you can designate an organization policy administrator so that only people with privilege can change policies."
+    },
+    {
+        "timestamp": "04:43",
+        "text": "You can also assign a project creator role, which is a great way to control who can create projects and, therefore, who can spend money."
+    },
+    {
+        "timestamp": "04:51",
+        "text": "How a new organization node is created depends on whether your company is also a Google Workspace customer."
+    },
+    {
+        "timestamp": "04:56",
+        "text": "If you have a Workspace domain, Google Cloud projects will automatically belong to your organization node."
+    },
+    {
+        "timestamp": "05:03",
+        "text": "Otherwise, you can use Cloud Identity, Google’s identity, access, application, and endpoint management platform, to generate one."
+    },
+    {
+        "timestamp": "05:11",
+        "text": "Once created, a new organization node will let anyone in the domain create projects and billing accounts, just as they could before."
+    },
+    {
+        "timestamp": "05:20",
+        "text": "folders underneath it and put projects into it."
+    },
+    {
+        "timestamp": "05:23",
+        "text": "Both folders and projects are considered to be “children” of the organization node."
+    },
+    {
+        "timestamp": "00:00",
+        "text": "In this section of the course we’ll look at the functional structure of Google Cloud. 00:05 Google Cloud’s resource hierarchy contains four levels, and starting from the bottom up they are: resources, projects, folders, and an organization node. 00:17 At the first level are resources. 00:20 These represent virtual machines, Cloud Storage buckets, tables in BigQuery, or anything else in Google Cloud. 00:29 Resources are organized into projects, which sit on the second level. 00:34 Projects can be organized into folders, or even subfolders. 00:37 These sit at the third level. 00:40 And then at the top level is an organization node, which encompasses all the projects, folders, and resources in your organization. 00:47 It’s important to understand this resource hierarchy because it directly relates to how policies are managed and applied when you use Google Cloud. 00:57 Policies can be defined at the project, folder, and organization node levels. 01:02 Some Google Cloud services allow policies to be applied to individual resources, too. 01:09 Policies are also inherited downward. 01:11 This means that if you apply a policy to a folder, it will also apply to all of the projects within that folder. 01:17 Let’s take a look at the second level of the resource hierarchy, projects, in a little more detail. 01:24 Projects are the basis for enabling and using Google Cloud services, like managing APIs, enabling billing, adding and removing collaborators, and enabling other Google services. 01:36 Each project is a separate entity under the organization node, and each resource belongs to exactly one project. 01:44 Projects can have different owners and users because they’re billed and managed separately. 01:49 Each Google Cloud project has three identifying attributes: a project ID, a project name, and a project number. 01:57 The project ID is a globally unique identifier assigned by Google that can’t be changed after creation. 02:04 They’re what we refer to as being immutable. 02:08 Project IDs are used in different contexts to inform Google Cloud of the exact project to work with. 02:15 Project names, however, are user-created. 02:17 They don’t have to be unique and they can be changed at any time, so they are not immutable. 02:23 Google Cloud also assigns each project a unique project number. 02:27 It’s helpful to know that these Google-generated numbers exist, but we won’t explore them much in this course. 02:32 They’re mainly used internally by Google Cloud to keep track of resources. 02:38 Google Cloud’s Resource Manager tool is designed to programmatically help you manage projects. 02:43 It’s an API that can gather a list of all the projects associated with an account, create new projects, update existing projects, and delete projects. 02:53 It can even recover projects that were previously deleted,and can be accessed through the RPC API and the REST API. 03:02 The third level of the Google Cloud resource hierarchy is folders. 03:06 Folders let you assign policies to resources at a level of granularity you choose. 03:11 The resources in a folder inherit policies and permissions assigned to that folder. 03:16 A folder can contain projects, other folders, or a combination of both. 03:22 You can use folders to group projects under an organization in a hierarchy. 03:26 For example, your organization might contain multiple departments, each with its own set Google Cloud resources. 03:33 Folders allow you to group these resources on a per-department basis. 03:38 Folders also give teams the ability to delegate administrative rights so that they can work independently. 03:44 As previously mentioned, the resources in a folder inherit policies and permissions from that folder. 03:51 For example, if you have two different projects that are administered by the same team, you can put policies into a common folder so they have the same permissions. 04:01 Doing it the other way--putting duplicate copies of those policies on both projects–could be tedious and error-prone. 04:08 if you needed to change permissions on both resources, you would now have to do that in two places instead of just one. 04:15 To use folders, you must have an organization node, which is the very topmost resource in the Google Cloud hierarchy. 04:21 Everything else attached to that account goes under this node, which includes folders, projects, and other resources. 04:30 There are some special roles associated with this top-level organization node. 04:34 For example, you can designate an organization policy administrator so that only people with privilege can change policies. 04:43 You can also assign a project creator role, which is a great way to control who can create projects and, therefore, who can spend money. 04:51 How a new organization node is created depends on whether your company is also a Google Workspace customer. 04:56 If you have a Workspace domain, Google Cloud projects will automatically belong to your organization node. 05:03 Otherwise, you can use Cloud Identity, Google’s identity, access, application, and endpoint management platform, to generate one. 05:11 Once created, a new organization node will let anyone in the domain create projects and billing accounts, just as they could before. 05:20 folders underneath it and put projects into it. 05:23 Both folders and projects are considered to be “children” of the organization node."
+    }
+]

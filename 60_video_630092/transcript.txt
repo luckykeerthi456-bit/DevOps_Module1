@@ -1,0 +1,58 @@
+Transcript
+
+00:00
+Now that we’ve covered Google Cloud’s core storage options, let’s do a comparison to help highlight the most suitable service for a specific application or workflow.
+
+00:10
+Consider using Cloud Storage if you need to store immutable blobs larger than 10 megabytes, such as large images or movies.
+
+00:18
+This storage service provides petabytes of capacity with a maximum unit size of 5 terabytes per object.
+
+00:26
+Consider using Cloud SQL or Spanner if you need full SQL support for an online transaction processing system.
+
+00:32
+Cloud SQL provides up to 64 terabytes, depending on machine type, and Spanner provides petabytes.
+
+00:39
+Cloud SQL is best for web frameworks and existing applications, like storing user credentials and customer orders.
+
+00:47
+If Cloud SQL doesn’t fit your requirements because you need horizontal scalability, not just through read replicas, consider using Spanner.
+
+00:57
+Consider Firestore if you need massive scaling and predictability together with real time query results and offline query support.
+
+01:05
+This storage service provides terabytes of capacity with a maximum unit size of 1 megabyte per entity.
+
+01:11
+Firestore is best for storing, syncing, and querying data for mobile and web apps.
+
+01:18
+Finally, consider using Bigtable if you need to store a large number of structured objects.
+
+01:24
+Bigtable doesn’t support SQL queries, nor does it support multi-row transactions.
+
+01:29
+This storage service provides petabytes of capacity with a maximum unit size of 10 megabytes per cell and 100 megabytes per row.
+
+01:38
+Bigtable is best for analytical data with heavy read and write events, like AdTech, financial, or IoT data.
+
+01:46
+Depending on your application, it’s possible that you might use one, or several, of these services to do the job.
+
+01:53
+You may have noticed that BigQuery hasn’t been mentioned in this section of the course.
+
+01:57
+This is because it sits on the edge between data storage and data processing, and is covered in more depth in other courses.
+
+02:04
+The usual reason to store data in BigQuery is so you can use its big data analysis and interactive querying capabilities, but it’s not purely a data storage product.
+
+00:00
+Now that we’ve covered Google Cloud’s core storage options, let’s do a comparison to help highlight the most suitable service for a specific application or workflow. 00:10 Consider using Cloud Storage if you need to store immutable blobs larger than 10 megabytes, such as large images or movies. 00:18 This storage service provides petabytes of capacity with a maximum unit size of 5 terabytes per object. 00:26 Consider using Cloud SQL or Spanner if you need full SQL support for an online transaction processing system. 00:32 Cloud SQL provides up to 64 terabytes, depending on machine type, and Spanner provides petabytes. 00:39 Cloud SQL is best for web frameworks and existing applications, like storing user credentials and customer orders. 00:47 If Cloud SQL doesn’t fit your requirements because you need horizontal scalability, not just through read replicas, consider using Spanner. 00:57 Consider Firestore if you need massive scaling and predictability together with real time query results and offline query support. 01:05 This storage service provides terabytes of capacity with a maximum unit size of 1 megabyte per entity. 01:11 Firestore is best for storing, syncing, and querying data for mobile and web apps. 01:18 Finally, consider using Bigtable if you need to store a large number of structured objects. 01:24 Bigtable doesn’t support SQL queries, nor does it support multi-row transactions. 01:29 This storage service provides petabytes of capacity with a maximum unit size of 10 megabytes per cell and 100 megabytes per row. 01:38 Bigtable is best for analytical data with heavy read and write events, like AdTech, financial, or IoT data. 01:46 Depending on your application, it’s possible that you might use one, or several, of these services to do the job. 01:53 You may have noticed that BigQuery hasn’t been mentioned in this section of the course. 01:57 This is because it sits on the edge between data storage and data processing, and is covered in more depth in other courses. 02:04 The usual reason to store data in BigQuery is so you can use its big data analysis and interactive querying capabilities, but it’s not purely a data storage product.

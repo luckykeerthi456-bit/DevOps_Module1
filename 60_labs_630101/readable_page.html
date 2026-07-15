@@ -1,0 +1,278 @@
+<!DOCTYPE html>\n<html lang='en'>\n<head>\n<meta charset='UTF-8'>\n<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n<title>Applications in the Cloud - Hello Cloud Run | Google Skills for Partners</title>\n
+<style>
+body { font-family: Arial, sans-serif; background: #f8fafd; color: #202124; margin: 0; line-height: 1.6; }
+.container { max-width: 980px; margin: 0 auto; background: #fff; padding: 32px; }
+h1 { font-size: 32px; border-bottom: 3px solid #4285f4; padding-bottom: 12px; }
+h2 { margin-top: 40px; border-bottom: 1px solid #dadce0; padding-bottom: 8px; color: #174ea6; }
+.meta, .card { background: #f1f3f4; border-radius: 12px; padding: 16px; margin: 16px 0; }
+.screenshot, img.lesson-image { max-width: 100%; border: 1px solid #dadce0; border-radius: 8px; }
+iframe.youtube { width: 100%; max-width: 900px; height: 506px; border: 0; border-radius: 12px; }
+.transcript-row { border-bottom: 1px solid #eee; padding: 12px 0; }
+.time { font-weight: bold; color: #1a73e8; }
+pre { white-space: pre-wrap; background: #f8f9fa; padding: 16px; border-radius: 8px; }
+a { color: #1a73e8; }
+</style>
+\n</head><body><div class='container'>\n<h1>Applications in the Cloud - Hello Cloud Run | Google Skills for Partners</h1>\n<h2>Metadata</h2><div class='meta'>\n<p><b>URL:</b> <a href='https://partner.skills.google/paths/20/course_sessions/39706059/labs/630101'>https://partner.skills.google/paths/20/course_sessions/39706059/labs/630101</a></p>\n<p><b>Lesson type:</b> labs</p>\n<p><b>Path ID:</b> 20</p>\n<p><b>Container:</b> course_sessions / 39706059</p>\n<p><b>Lesson ID:</b> 630101</p>\n<p><b>Generated:</b> 2026-07-10 04:48:07</p>\n</div>\n<h2>Full Page Screenshot</h2>\n<p><img class='screenshot' src='screenshot.png' alt='Full page screenshot'></p>\n<h2>YouTube Video</h2>\n<p>No YouTube video found.</p>\n<h2>Transcript</h2>\n<p>No transcript available for this page.</p>\n<h2>Page Text</h2>\n<pre>Partner
+4
+navigate_next
+Professional Cloud DevOps Engineer Certification
+navigate_next
+Google Cloud Fundamentals: Core Infrastructure
+navigate_next
+Hello Cloud Run
+This lab may incorporate AI tools to support your learning.
+Overview
+
+Cloud Run is a managed compute platform that enables you to run stateless containers that are invocable via HTTP requests. Cloud Run is serverless: it abstracts away all infrastructure management, so you can focus on what matters most — building great applications.
+
+The goal of this lab is for you to build a simple containerized application image and deploy it to Cloud Run.
+
+Objectives
+
+In this lab, you learn to:
+
+Enable the Cloud Run and Artifact Registry APIs.
+Create a simple Node.js application that can be deployed as a serverless, stateless container.
+Create an Artifact Registry repository.
+Containerize your application and upload it to Artifact Registry.
+Deploy a containerized application on Cloud Run.
+Delete unneeded images to avoid incurring extra storage charges.
+Setup and requirements
+
+For each lab, you get a new Google Cloud project and set of resources for a fixed time at no cost.
+
+Click the Start Lab button. If you need to pay for the lab, a pop-up opens for you to select your payment method. On the right is the Lab setup and access panel with the following:
+
+The Open Google Cloud console button
+The temporary credentials (username and password) that you must use for this lab
+Other information, if needed, to step through this lab
+
+Note that the lab timer is located near the top of the page, showing the remaining time.
+
+Click Open Google Cloud console (or right-click and select Open Link in Incognito Window if you are running the Chrome browser).
+
+The lab spins up resources, and then opens another tab that shows the Sign in page.
+
+Tip: Arrange the tabs in separate windows, side-by-side.
+
+Note: If you see the Choose an account dialog, click Use Another Account.
+
+If necessary, copy the Username below and paste it into the Sign in dialog.
+
+You can also find the Username in the Lab setup and access panel.
+
+Click Next.
+
+Copy the Password below and paste it into the Welcome dialog.
+
+You can also find the Password in the Lab setup and access panel.
+
+Click Next.
+
+Important: You must use the credentials the lab provides you. Do not use your Google Cloud account credentials.
+Note: Using your own Google Cloud account for this lab may incur extra charges.
+
+Click through the subsequent pages:
+
+Accept the terms and conditions.
+Do not add recovery options or two-factor authentication (because this is a temporary account).
+Do not sign up for free trials.
+
+After a few moments, the Google Cloud console opens in this tab.
+
+Note: To view a menu with a list of Google Cloud products and services, click the Navigation menu at the top-left, or type the service or product name in the Search field. 
+Activate Google Cloud Shell
+
+Google Cloud Shell is a virtual machine that is loaded with development tools. It offers a persistent 5GB home directory and runs on the Google Cloud.
+
+Google Cloud Shell provides command-line access to your Google Cloud resources.
+
+In Cloud console, on the top right toolbar, click the Open Cloud Shell button.
+
+Click Continue.
+
+It takes a few moments to provision and connect to the environment. When you are connected, you are already authenticated, and the project is set to your PROJECT_ID. For example:
+
+gcloud is the command-line tool for Google Cloud. It comes pre-installed on Cloud Shell and supports tab-completion.
+
+You can list the active account name with this command:
+
+Output:
+
+Example output:
+
+You can list the project ID with this command:
+
+Output:
+
+Example output:
+
+Note: Full documentation of gcloud is available in the gcloud CLI overview guide .
+Reference
+Basic Linux Commands
+
+Below you will find a reference list of a few very basic Linux commands which may be included in the instructions or code blocks for this lab.
+
+Command --&gt;	Action	.	Command --&gt;	Action
+mkdir (make directory)	create a new folder	.	cd (change directory)	change location to another folder
+ls (list )	list files and folders in the directory	.	cat (concatenate)	read contents of a file without using an editor
+apt-get update	update package manager library	.	ping	signal to test reachability of a host
+mv (move )	moves a file	.	cp (copy)	makes a file copy
+pwd (present working directory )	returns your current location	.	sudo (super user do)	gives higher administration privileges
+Task 1. Enable the Cloud Run API and configure your Shell environment
+
+In this task, you enable the necessary APIs and set up environment variables to simplify your commands.
+
+From Cloud Shell, enable the Cloud Run API and Artifact Registry API. This allows your project to accept requests for these services:
+If you are asked to authorize the use of your credentials, do so. You should then see a successful message similar to this one:
+Note: You can also enable the API using the APIs &amp; Services section of the Google Cloud console.
+Set the compute region:
+Create a LOCATION environment variable:
+Task 2. Write the sample application
+
+In this task, you will build a simple express-based NodeJS application which responds to HTTP requests.
+
+In Cloud Shell create a new directory named helloworld, then move your view into that directory:
+
+Next you'll be creating and editing files. To edit files, use nano or the Cloud Shell Code Editor by clicking on the Open Editor button in Cloud Shell.
+
+Create a package.json file, then add the following content to it:
+
+Most importantly, the file above contains a start script command and a dependency on the Express web application framework.
+
+Press CTRL+X, then Y, then Enter to save the package.json file.
+
+Next, in the same directory, create an index.js file, and copy the following lines into it:
+
+This code creates a basic web server that listens on the port defined by the PORT environment variable. Your app is now finished and ready to be containerized and uploaded to Artifact Registry.
+
+Press CTRL+X, then Y, then Enter to save the index.js file
+Note: You can use many other languages to get started with Cloud Run. You can find instructions for Go, Python, Java, PHP, Ruby, Shell scripts, and others from the Quickstarts guide.
+Task 3. Create an Artifact Registry repository
+
+In this task, you create a repository in Artifact Registry. This repository will act as the storage location for your container images, allowing Google Cloud services to access and pull them.
+
+Create a new Docker repository named my-repository in your region:
+Configure Docker to authenticate requests for Artifact Registry in your region:
+
+Click Check my progress to verify the objective.Create an Artifact Registry repository
+
+Task 4. Containerize your app and upload it to Artifact Registry
+
+In this task, you containerize your sample application and push the image to Artifact Registry.
+
+To containerize the sample app, create a new file named Dockerfile in the same directory as the source files. This file acts as a recipe, instructing Docker how to build your image:
+
+Press CTRL+X, then Y, then Enter to save the Dockerfile file.
+
+Now, build your container image using Cloud Build by running the following command from the directory containing the Dockerfile. (Note the $GOOGLE_CLOUD_PROJECT environmental variable in the command, which contains your lab's Project ID):
+
+Cloud Build is a service that executes your builds on Google Cloud. It executes a series of build steps, where each build step is run in a Docker container to produce your application container (or other artifacts) and push it to Artifact Registry, all in one command.
+
+Once pushed to the registry, you will see a SUCCESS message containing the image name. The image is stored in Artifact Registry and can be re-used if desired.
+
+To run and test the application locally from Cloud Shell, start it using this standard docker command:
+In the Cloud Shell window, click on Web preview and select Preview on port 8080.
+
+This should open a browser window showing the &quot;Hello World!&quot; message. You could also simply use curl localhost:8080.
+
+Click Check my progress to verify the objective.Containerize your app and upload it to Artifact Registry
+
+Task 5. Deploy to Cloud Run
+
+In this task, you deploy your containerized application to Cloud Run. This process spins up a service that can respond to web requests via a secure HTTPS URL.
+
+Deploy your containerized application to Cloud Run using the following command:
+
+The allow-unauthenticated flag in the command above makes your service publicly accessible.
+
+If prompted to enable APIs, type Y.
+
+Wait a few moments until the deployment is complete. On success, the command line displays the service URL:
+
+You can now visit your deployed container by opening the service URL in any browser window.
+
+Congratulations! You have just deployed an application packaged in a container image to Cloud Run. Cloud Run automatically and horizontally scales your container image to handle the received requests, then scales down when demand decreases. In your own environment, you only pay for the CPU, memory, and networking consumed during request handling.
+
+For this lab you used the gcloud command-line. Cloud Run is also available via Cloud console.
+
+In the Google Cloud console, on the Navigation menu (), click Cloud Run and you should see your helloworld service listed:
+
+Click Check my progress to verify the objective.Deploy a containerized application on Cloud Run
+
+Task 6. Clean up
+
+In this task, you delete the deployed service and the container image to avoid incurring charges.
+
+While Cloud Run does not charge when the service is not in use, you might still be charged for storing the built container image.
+
+You can delete your helloworld image using the following command:
+
+When prompted to continue type Y, and press Enter.
+
+To delete the Cloud Run service, use this command :
+
+When prompted to continue type Y, and press Enter.
+End your lab
+
+When you have completed your lab, click End Lab. Google Skills removes the resources you’ve used and cleans the account for you.
+
+You will be given an opportunity to rate the lab experience. Select the applicable number of stars, type a comment, and then click Submit.
+
+The number of stars indicates the following:
+
+1 star = Very dissatisfied
+2 stars = Dissatisfied
+3 stars = Neutral
+4 stars = Satisfied
+5 stars = Very satisfied
+
+You can close the dialog box if you don't want to provide feedback.
+
+For feedback, suggestions, or corrections, please use the Support tab.
+
+Congratulations!
+
+You have completed this lab!
+
+Next steps / learn more
+
+For more information on building a stateless HTTP container suitable for Cloud Run from code source and pushing it to Artifact Registry, view:
+
+Developing Cloud Run services
+Building Containers
+
+Copyright 2026 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.
+
+Previous
+Next
+Recertify in 3 simple steps:
+Link your Google Skills and certification account profiles using the same email to get started.
+Instantly see which certifications are eligible for renewal.
+Complete courses and skill badges to renew your certifications automatically.
+
+By clicking &quot;Accept&quot;, I consent to share my name, email, and course completion data with Google Skills' certification partner, CM Connect, to receive continuing education credit for certification renewal.
+
+Before you begin
+Labs create a Google Cloud project and resources for a fixed time
+Labs have a time limit and no pause feature. If you end the lab, you'll have to restart from the beginning.
+On the top left of your screen, click Start lab to begin
+
+This content is not currently available
+
+We will notify you via email when it becomes available
+
+Great!
+
+We will contact you via email if it becomes available
+
+One lab at a time
+
+Confirm to end all existing labs and start this one
+
+Use private browsing to run the lab
+Using an Incognito or private browser window is the best way to run this lab. This prevents any conflicts between your personal account and the Student account, which may cause extra charges incurred to your personal account.
+Additional Comments
+
+Complete this quick step to start your lab.</pre>\n<h2>Images</h2>\n<div class='card'>\n<h3>Image 1</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/lqJbxogu4tSLez1OvjDcIO8rwow6cPLwvrfIdmQLf6U%3D' alt='Google Skills for Partners'>\n<p>Google Skills for Partners</p>\n<p><a href='https://cdn.qwiklabs.com/lqJbxogu4tSLez1OvjDcIO8rwow6cPLwvrfIdmQLf6U%3D' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 2</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/assets/gamification/streak_icon-21476b37c13f49828a5aaa2d86c4d3378cca4117.svg' alt='Current streak count'>\n<p>Current streak count</p>\n<p><a href='https://cdn.qwiklabs.com/assets/gamification/streak_icon-21476b37c13f49828a5aaa2d86c4d3378cca4117.svg' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 3</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/1d2sNybCwEWoWfxc%2FNEUFPsGq9ntjZEQgOgq2RJHmE4%3D' alt='Cloud Run Logo'>\n<p>Cloud Run Logo</p>\n<p><a href='https://cdn.qwiklabs.com/1d2sNybCwEWoWfxc%2FNEUFPsGq9ntjZEQgOgq2RJHmE4%3D' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 4</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/9Fk8NYFp3quE9mF%2FilWF6%2FlXY9OUBi3UWtb2Ne4uXNU%3D' alt='Navigation menu icon'>\n<p>Navigation menu icon</p>\n<p><a href='https://cdn.qwiklabs.com/9Fk8NYFp3quE9mF%2FilWF6%2FlXY9OUBi3UWtb2Ne4uXNU%3D' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 5</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/WGBFVIap4CrFWut%2BGdNFzNxeelWYHF1IqYSMFH6Ouq4%3D' alt='Highlighted Cloud Shell icon'>\n<p>Highlighted Cloud Shell icon</p>\n<p><a href='https://cdn.qwiklabs.com/WGBFVIap4CrFWut%2BGdNFzNxeelWYHF1IqYSMFH6Ouq4%3D' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 6</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/hmMK0W41Txk%2B20bQyuDP9g60vCdBajIS%2B52iI2f4bYk%3D' alt='Project ID highlighted in the Cloud Shell Terminal'>\n<p>Project ID highlighted in the Cloud Shell Terminal</p>\n<p><a href='https://cdn.qwiklabs.com/hmMK0W41Txk%2B20bQyuDP9g60vCdBajIS%2B52iI2f4bYk%3D' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 7</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/VjQNdBvvAlr7BxY91Fqz2%2BrpUyxA5K2uUQDk%2FiwwIag%3D' alt='Cloud Run tab displaying the helloworld service'>\n<p>Cloud Run tab displaying the helloworld service</p>\n<p><a href='https://cdn.qwiklabs.com/VjQNdBvvAlr7BxY91Fqz2%2BrpUyxA5K2uUQDk%2FiwwIag%3D' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 8</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/assets/labs/start_lab-f45aca49782d4033c3ff688160387ac98c66941d.png' alt='Image 8'>\n<p>Image 8</p>\n<p><a href='https://cdn.qwiklabs.com/assets/labs/start_lab-f45aca49782d4033c3ff688160387ac98c66941d.png' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 9</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/assets/labs/open_incognito_window-3ab2004605e88542dd7732361c3fc0e010c7fb6e.png' alt='Image 9'>\n<p>Image 9</p>\n<p><a href='https://cdn.qwiklabs.com/assets/labs/open_incognito_window-3ab2004605e88542dd7732361c3fc0e010c7fb6e.png' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 10</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/assets/labs/google_sign_in-f9eb84339d08f7db8c5fdfa7ce7726d3531dae80.png' alt='Image 10'>\n<p>Image 10</p>\n<p><a href='https://cdn.qwiklabs.com/assets/labs/google_sign_in-f9eb84339d08f7db8c5fdfa7ce7726d3531dae80.png' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 11</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/assets/lab_enablement_notification/disable_lab-47cff1f6bc3610f58767251ff93c2f99cf4f9040.png' alt='Image 11'>\n<p>Image 11</p>\n<p><a href='https://cdn.qwiklabs.com/assets/lab_enablement_notification/disable_lab-47cff1f6bc3610f58767251ff93c2f99cf4f9040.png' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 12</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/assets/lab_enablement_notification/notifcation_subscribed-2b4f9e51439e1a107488ab58a6e13c3c62ef8855.png' alt='Image 12'>\n<p>Image 12</p>\n<p><a href='https://cdn.qwiklabs.com/assets/lab_enablement_notification/notifcation_subscribed-2b4f9e51439e1a107488ab58a6e13c3c62ef8855.png' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 13</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/assets/quota_management/quota_empty-2ba3ec879dea3091828ec9cfa060947292e2c554.png' alt='Image 13'>\n<p>Image 13</p>\n<p><a href='https://cdn.qwiklabs.com/assets/quota_management/quota_empty-2ba3ec879dea3091828ec9cfa060947292e2c554.png' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 14</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/assets/quota_management/one_lab_quota-77010e9a83e0a6c7543477868b8b808d70222adb.png' alt='Image 14'>\n<p>Image 14</p>\n<p><a href='https://cdn.qwiklabs.com/assets/quota_management/one_lab_quota-77010e9a83e0a6c7543477868b8b808d70222adb.png' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 15</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/assets/logo_linkedin-a277effb6f261f5d3b8ad0fc692fb0025ff82eaf.png' alt='Image 15'>\n<p>Image 15</p>\n<p><a href='https://cdn.qwiklabs.com/assets/logo_linkedin-a277effb6f261f5d3b8ad0fc692fb0025ff82eaf.png' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 16</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/assets/logo_x-2abcf45e0673a8f244a6b686ea7f0189457d4fe3.png' alt='Image 16'>\n<p>Image 16</p>\n<p><a href='https://cdn.qwiklabs.com/assets/logo_x-2abcf45e0673a8f244a6b686ea7f0189457d4fe3.png' target='_blank'>Open source</a></p>\n</div>\n<div class='card'>\n<h3>Image 17</h3>\n<img class='lesson-image' src='https://cdn.qwiklabs.com/assets/logo_facebook-5ccdec05e255be16449f837fff607b6d33ae9b87.png' alt='Image 17'>\n<p>Image 17</p>\n<p><a href='https://cdn.qwiklabs.com/assets/logo_facebook-5ccdec05e255be16449f837fff607b6d33ae9b87.png' target='_blank'>Open source</a></p>\n</div>\n<h2>Main Resources</h2>\n<h3>youtube</h3><ul>\n<li><a href='https://www.youtube.com/@googlecloud' target='_blank'>Youtube</a></li>\n</ul>\n<h3>videos</h3><ul>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630060' target='_blank'>Course Introduction</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630061' target='_blank'>Cloud computing overview</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630062' target='_blank'>IaaS and PaaS</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630063' target='_blank'>The Google Cloud network</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630064' target='_blank'>Environmental impact</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630065' target='_blank'>Security</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630066' target='_blank'>Open source ecosystems</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630067' target='_blank'>Pricing and billing</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630069' target='_blank'>Google Cloud resource hierarchy</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630070' target='_blank'>Identity and Access Management (IAM)</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630071' target='_blank'>Service accounts</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630072' target='_blank'>Cloud Identity</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630073' target='_blank'>Interacting with Google Cloud</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630076' target='_blank'>Virtual Private Cloud networking</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630077' target='_blank'>Compute Engine</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630078' target='_blank'>Scaling virtual machines</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630079' target='_blank'>Important VPC compatibilities</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630080' target='_blank'>Cloud Load Balancing</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630081' target='_blank'>Cloud DNS and Cloud CDN</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630082' target='_blank'>Connecting networks to Google VPC</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630085' target='_blank'>Google Cloud storage options</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630086' target='_blank'>Cloud Storage</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630087' target='_blank'>Cloud Storage: Storage classes and data transfer</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630088' target='_blank'>Cloud SQL</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630089' target='_blank'>Spanner</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630090' target='_blank'>Firestore</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630091' target='_blank'>Bigtable</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630092' target='_blank'>Comparing storage options</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630095' target='_blank'>Introduction to containers</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630096' target='_blank'>Kubernetes</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630097' target='_blank'>Google Kubernetes Engine</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630099' target='_blank'>Cloud Run</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630100' target='_blank'>Development in the cloud</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630103' target='_blank'>Prompt Engineering</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630105' target='_blank'>Course summary</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/video/630100' target='_blank'>Resource</a></li>\n</ul>\n<h3>labs</h3><ul>\n<li><a href='https://support.google.com/qwiklabs/contact/Google_Skills_Partner' target='_blank'>Resource</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/labs/630074' target='_blank'>Google Cloud Fundamentals: Getting Started with Cloud Marketplace</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/labs/630083' target='_blank'>Get Started with Virtual Private Cloud Networking and Compute Engine</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/labs/630093' target='_blank'>Google Cloud Fundamentals: Getting Started with Cloud Storage and Cloud SQL</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/labs/630101' target='_blank'>Hello Cloud Run</a></li>\n</ul>\n<h3>external_links</h3><ul>\n<li><a href='https://partner.skills.google/' target='_blank'>Resource</a></li>\n<li><a href='https://partner.skills.google/paths/20' target='_blank'>Professional Cloud DevOps Engineer Certification</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_templates/60' target='_blank'>Google Cloud Fundamentals: Core Infrastructure</a></li>\n<li><a href='https://cloud.google.com/run' target='_blank'>Cloud Run</a></li>\n<li><a href='https://cloud.google.com/sdk/gcloud' target='_blank'>gcloud CLI overview guide</a></li>\n<li><a href='https://cloud.google.com/run/docs/quickstarts/build-and-deploy' target='_blank'>Quickstarts guide</a></li>\n<li><a href='https://cloud.google.com/run/docs/developing' target='_blank'>Developing Cloud Run services</a></li>\n<li><a href='https://cloud.google.com/run/docs/building/containers' target='_blank'>Building Containers</a></li>\n<li><a href='https://partner.skills.google/' target='_blank'>Dashboard</a></li>\n<li><a href='https://partner.skills.google/catalog' target='_blank'>Catalog</a></li>\n<li><a href='https://partner.skills.google/paths' target='_blank'>Paths</a></li>\n<li><a href='https://partner.skills.google/subscriptions' target='_blank'>Subscriptions</a></li>\n<li><a href='https://partner.skills.google/profile/stay_on_track' target='_blank'>Activities</a></li>\n<li><a href='https://partner.skills.google/profile/badges' target='_blank'>Achievements</a></li>\n<li><a href='https://partner.skills.google/catalog_lab/3390' target='_blank'>https://partner.skills.google/catalog_lab/3390</a></li>\n<li><a href='https://x.com/intent/tweet?text=Learn%20cloud%20tech%20through%20hands-on%20training%20on%20%23GoogleSkills%21&amp;url=https%3A%2F%2Fpartner.skills.google%2Fcatalog_lab%2F3390%3Futm_medium%3Dsocial%26utm_source%3Dx%26utm_campaign%3Dql-social-share&amp;hashtags=' target='_blank'>Resource</a></li>\n<li><a href='https://partner.skills.google/profile/activity' target='_blank'>Resource</a></li>\n<li><a href='https://partner.skills.google/my_account/profile' target='_blank'>Resource</a></li>\n<li><a href='https://partner.skills.google/my_account/programs' target='_blank'>Programs</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_templates/60' target='_blank'>Overview</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630068' target='_blank'>Quiz</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630075' target='_blank'>Quiz</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630084' target='_blank'>Quiz</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630094' target='_blank'>Quiz</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630098' target='_blank'>Quiz</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630102' target='_blank'>Quiz</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630104' target='_blank'>Quiz</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/documents/630106' target='_blank'>Course resources</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_templates/60/badge' target='_blank'>Claim credential</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_templates/60/course_surveys/0' target='_blank'>Course Survey
+      Recommended</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_sessions/39706059/quizzes/630102' target='_blank'>Resource</a></li>\n<li><a href='https://partner.skills.google/focuses/816163908/set_up_lab_forward_url?course_template=60&amp;parent=course_session' target='_blank'>Resource</a></li>\n<li><a href='https://partner.skills.google/paths/20/course_templates/60/preview' target='_blank'>Resource</a></li>\n</ul>\n<h2>Headings</h2>\n<ul>\n<li><b>H4</b>: Checkpoints</li>\n<li><b>H1</b>: Hello Cloud Run</li>\n<li><b>H2</b>: Overview</li>\n<li><b>H3</b>: Objectives</li>\n<li><b>H2</b>: Setup and requirements</li>\n<li><b>H3</b>: Activate Google Cloud Shell</li>\n<li><b>H3</b>: Reference</li>\n<li><b>H3</b>: Basic Linux Commands</li>\n<li><b>H2</b>: Task 1. Enable the Cloud Run API and configure your Shell environment</li>\n<li><b>H2</b>: Task 2. Write the sample application</li>\n<li><b>H2</b>: Task 3. Create an Artifact Registry repository</li>\n<li><b>H2</b>: Task 4. Containerize your app and upload it to Artifact Registry</li>\n<li><b>H2</b>: Task 5. Deploy to Cloud Run</li>\n<li><b>H2</b>: Task 6. Clean up</li>\n<li><b>H2</b>: End your lab</li>\n<li><b>H2</b>: Congratulations!</li>\n<li><b>H3</b>: Next steps / learn more</li>\n<li><b>H2</b>: Recertify in 3 simple steps:</li>\n<li><b>H1</b>: Before you begin</li>\n<li><b>H1</b>: Use private browsing</li>\n<li><b>H1</b>: Sign in to the Console</li>\n<li><b>H1</b>: Score Details</li>\n<li><b>H1</b>: Use private browsing to run the lab</li>\n<li><b>H1</b>: How satisfied are you with this lab?*</li>\n<li><b>H1</b>: Are you sure? You may not be able to restart the lab, and you'll need to start from the beginning if you do.</li>\n<li><b>H1</b>: Verify you're human</li>\n<li><b>H1</b>: A newer version of this course is available. Your progress will carry over if you choose to upgrade. However, your completion percentage may change if the new version has added or removed any learning activities. Click the preview button to see the course changes before upgrading.</li>\n</ul>\n</div></body></html>

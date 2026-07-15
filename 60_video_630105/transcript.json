@@ -1,0 +1,26 @@
+[
+    {
+        "timestamp": "00:00",
+        "text": "Congratulations on completing the Google Cloud Fundamentals: Core Infrastructure training course."
+    },
+    {
+        "timestamp": "00:05",
+        "text": "Before you go, let’s take a few minutes to review what we’ve covered."
+    },
+    {
+        "timestamp": "00:10",
+        "text": "In module 1, you were introduced to Google Cloud and cloud computing."
+    },
+    {
+        "timestamp": "00:14",
+        "text": "Specifically, you explored: The concept of managed infrastructure and managed services, through IaaS, infrastructure as a service, and PaaS, platform as a service."
+    },
+    {
+        "timestamp": "00:24",
+        "text": "The Google Cloud network."
+    },
+    {
+        "timestamp": "00:26",
+        "text": "Google Cloud’s focus on security throughout our infrastructure."
+    }
+]

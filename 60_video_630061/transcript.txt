@@ -1,0 +1,97 @@
+Transcript
+
+00:00
+Let’s start at the beginning with an overview of cloud computing.
+
+00:04
+The cloud is a hot topic these days, but what exactly is it?
+
+00:09
+The US National Institute of Standards and Technology created the term cloud computing, although there is nothing US-specific about it.
+
+00:17
+Cloud computing is a way of using information technology (IT) that has these five equally important traits.
+
+00:25
+First, customers get computing resources that are on-demand and self-service.
+
+00:31
+Through a web interface, users get the processing power, storage, and network they require without the need for human intervention.
+
+00:40
+Second, customers get access to those resources over the internet, from anywhere they have a connection.
+
+00:46
+Third, the cloud provider has a big pool of those resources and allocates them to users out of that pool.
+
+00:53
+That allows the provider to buy in bulk and pass the savings on to the customers.
+
+00:58
+Customers don't have to know or care about the exact physical location of those resources.
+
+01:05
+Fourth, the resources are elastic–which means they’re flexible, so customers can be.
+
+01:10
+If customers need more resources they can get more, and quickly.
+
+01:14
+If they need less, they can scale back.
+
+01:18
+And finally, customers pay only for what they use, or reserve as they go.
+
+01:22
+If they stop using resources, they stop paying.
+
+01:26
+And that's it, that's the definition of cloud.
+
+01:30
+But why is the cloud model so compelling nowadays?
+
+01:33
+To understand why, we need to look at some history.
+
+01:37
+The trend towards cloud computing started with a first wave known as colocation.
+
+01:42
+Colocation gave users the financial efficiency of renting physical space, instead of investing in data center real estate.
+
+01:50
+Virtualized data centers of today, which are the second wave, share similarities with the private data centers and colocation facilities of decades past.
+
+02:00
+The components of virtualized data centers match the physical building blocks of hosted computing—servers, CPUs, disks, load balancers, and so on—but now they’re virtual devices.
+
+02:13
+With virtualization, enterprises still maintain the infrastructure; but it also remains a user-controlled and user-configured environment.
+
+02:22
+Several years ago, Google realized that its business couldn’t move fast enough within the confines of the virtualization model.
+
+02:30
+So Google switched to a container-based architecture— a fully automated, elastic third-wave cloud that consists of a combination of automated services and scalable data.
+
+02:41
+Services automatically provision and configure the infrastructure used to run applications.
+
+02:48
+Today, Google Cloud makes this third-wave cloud available to Google customers.
+
+02:54
+Google believes that, in the future, every company, regardless of size or industry, will differentiate itself from its competitors through technology.
+
+03:03
+Increasingly, that technology will be in the form of software.
+
+03:07
+Great software is based on high-quality data.
+
+03:12
+This means that every company is, or will eventually become, a data company.
+
+00:00
+Let’s start at the beginning with an overview of cloud computing. 00:04 The cloud is a hot topic these days, but what exactly is it? 00:09 The US National Institute of Standards and Technology created the term cloud computing, although there is nothing US-specific about it. 00:17 Cloud computing is a way of using information technology (IT) that has these five equally important traits. 00:25 First, customers get computing resources that are on-demand and self-service. 00:31 Through a web interface, users get the processing power, storage, and network they require without the need for human intervention. 00:40 Second, customers get access to those resources over the internet, from anywhere they have a connection. 00:46 Third, the cloud provider has a big pool of those resources and allocates them to users out of that pool. 00:53 That allows the provider to buy in bulk and pass the savings on to the customers. 00:58 Customers don't have to know or care about the exact physical location of those resources. 01:05 Fourth, the resources are elastic–which means they’re flexible, so customers can be. 01:10 If customers need more resources they can get more, and quickly. 01:14 If they need less, they can scale back. 01:18 And finally, customers pay only for what they use, or reserve as they go. 01:22 If they stop using resources, they stop paying. 01:26 And that's it, that's the definition of cloud. 01:30 But why is the cloud model so compelling nowadays? 01:33 To understand why, we need to look at some history. 01:37 The trend towards cloud computing started with a first wave known as colocation. 01:42 Colocation gave users the financial efficiency of renting physical space, instead of investing in data center real estate. 01:50 Virtualized data centers of today, which are the second wave, share similarities with the private data centers and colocation facilities of decades past. 02:00 The components of virtualized data centers match the physical building blocks of hosted computing—servers, CPUs, disks, load balancers, and so on—but now they’re virtual devices. 02:13 With virtualization, enterprises still maintain the infrastructure; but it also remains a user-controlled and user-configured environment. 02:22 Several years ago, Google realized that its business couldn’t move fast enough within the confines of the virtualization model. 02:30 So Google switched to a container-based architecture— a fully automated, elastic third-wave cloud that consists of a combination of automated services and scalable data. 02:41 Services automatically provision and configure the infrastructure used to run applications. 02:48 Today, Google Cloud makes this third-wave cloud available to Google customers. 02:54 Google believes that, in the future, every company, regardless of size or industry, will differentiate itself from its competitors through technology. 03:03 Increasingly, that technology will be in the form of software. 03:07 Great software is based on high-quality data. 03:12 This means that every company is, or will eventually become, a data company.

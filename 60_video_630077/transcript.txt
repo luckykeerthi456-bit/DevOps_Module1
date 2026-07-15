@@ -1,0 +1,100 @@
+Transcript
+
+00:00
+Earlier in the course, we explored infrastructure as a service, or IaaS.
+
+00:05
+Now let’s explore Google Cloud’s IaaS solution: Compute Engine.
+
+00:10
+With Compute Engine, users can create and run virtual machines on Google infrastructure.
+
+00:16
+There are no upfront investments, and thousands of virtual CPUs can run on a system that’s designed to be fast and to offer consistent performance.
+
+00:26
+Each virtual machine contains the power and functionality of a full-fledged operating system.
+
+00:31
+This means a virtual machine can be configured much like a physical server: by specifying the amount
+
+00:36
+of CPU power and memory needed, the amount and type of storage needed, and the operating system.
+
+00:44
+A virtual machine instance can be created via the Google Cloud console, which is a web-based
+
+00:49
+tool to manage Google Cloud projects and resources, the Google Cloud CLI, or the Compute Engine API.
+
+00:57
+The instance can run Linux and Windows Server images provided by Google or any customized versions of these images.
+
+01:05
+You can also build and run images of other operating systems and flexibly reconfigure virtual machines.
+
+01:13
+A quick way to get started with Google Cloud is through the Cloud Marketplace, which offers solutions from both Google and third-party vendors.
+
+01:21
+With these solutions, there’s no need to manually configure the software, virtual machine instances, storage, or network settings, although many of them can be modified before launch if that’s required.
+
+01:32
+Most software packages in Cloud Marketplace are available at no additional charge beyond the normal usage fees for Google Cloud resources.
+
+01:40
+Some Cloud Marketplace images charge usage fees, particularly those published by third parties with commercially licensed software, but they all show estimates of their monthly charges before they’re launched.
+
+01:53
+At this point, you might be wondering about Compute Engine’s pricing and billing structure.
+
+01:58
+For the use of virtual machines, Compute Engine bills by the second with a one-minute minimum, and sustained-use discounts start to apply automatically to virtual machines the longer they run.
+
+02:10
+So, for each VM that runs for more than 25% of a month, Compute Engine automatically applies a discount for every additional minute.
+
+02:18
+Compute Engine also offers committed-use discounts.
+
+02:21
+This means that for stable and predictable workloads, a specific amount of vCPUs and memory can be purchased for up to
+
+02:28
+a 57% discount off of normal prices in return for committing to a usage term of one year or three years.
+
+02:37
+Then there are Spot VMs.
+
+02:39
+These are perfect for workloads that don't require immediate human oversight— like a batch job analyzing a large dataset.
+
+02:46
+By opting for Spot VMs, you can save up to 90% compared to standard pricing.
+
+02:51
+Unlike the older 'Preemptible' model, Spot VMs have no maximum runtime; they can run as long as the capacity is available.
+
+03:00
+The primary trade-off is that Google Cloud reserves the right to terminate the instance if those resources are needed elsewhere.
+
+03:07
+While the savings are significant, you must ensure your workload is designed to be stopped and restarted without losing progress.
+
+03:15
+In terms of storage, Compute Engine doesn’t require a particular option or machine type to get high throughput between processing and persistent disks.
+
+03:23
+That’s the default, and it comes to you at no extra cost.
+
+03:27
+And finally, you’ll only pay for what you need with custom machine types.
+
+03:33
+Compute Engine lets you choose the machine properties of your instances, like the number of virtual CPUs and the
+
+03:37
+amount of memory, by using a set of predefined machine types or by creating your own custom machine types.
+
+00:00
+Earlier in the course, we explored infrastructure as a service, or IaaS. 00:05 Now let’s explore Google Cloud’s IaaS solution: Compute Engine. 00:10 With Compute Engine, users can create and run virtual machines on Google infrastructure. 00:16 There are no upfront investments, and thousands of virtual CPUs can run on a system that’s designed to be fast and to offer consistent performance. 00:26 Each virtual machine contains the power and functionality of a full-fledged operating system. 00:31 This means a virtual machine can be configured much like a physical server: by specifying the amount 00:36 of CPU power and memory needed, the amount and type of storage needed, and the operating system. 00:44 A virtual machine instance can be created via the Google Cloud console, which is a web-based 00:49 tool to manage Google Cloud projects and resources, the Google Cloud CLI, or the Compute Engine API. 00:57 The instance can run Linux and Windows Server images provided by Google or any customized versions of these images. 01:05 You can also build and run images of other operating systems and flexibly reconfigure virtual machines. 01:13 A quick way to get started with Google Cloud is through the Cloud Marketplace, which offers solutions from both Google and third-party vendors. 01:21 With these solutions, there’s no need to manually configure the software, virtual machine instances, storage, or network settings, although many of them can be modified before launch if that’s required. 01:32 Most software packages in Cloud Marketplace are available at no additional charge beyond the normal usage fees for Google Cloud resources. 01:40 Some Cloud Marketplace images charge usage fees, particularly those published by third parties with commercially licensed software, but they all show estimates of their monthly charges before they’re launched. 01:53 At this point, you might be wondering about Compute Engine’s pricing and billing structure. 01:58 For the use of virtual machines, Compute Engine bills by the second with a one-minute minimum, and sustained-use discounts start to apply automatically to virtual machines the longer they run. 02:10 So, for each VM that runs for more than 25% of a month, Compute Engine automatically applies a discount for every additional minute. 02:18 Compute Engine also offers committed-use discounts. 02:21 This means that for stable and predictable workloads, a specific amount of vCPUs and memory can be purchased for up to 02:28 a 57% discount off of normal prices in return for committing to a usage term of one year or three years. 02:37 Then there are Spot VMs. 02:39 These are perfect for workloads that don't require immediate human oversight— like a batch job analyzing a large dataset. 02:46 By opting for Spot VMs, you can save up to 90% compared to standard pricing. 02:51 Unlike the older 'Preemptible' model, Spot VMs have no maximum runtime; they can run as long as the capacity is available. 03:00 The primary trade-off is that Google Cloud reserves the right to terminate the instance if those resources are needed elsewhere. 03:07 While the savings are significant, you must ensure your workload is designed to be stopped and restarted without losing progress. 03:15 In terms of storage, Compute Engine doesn’t require a particular option or machine type to get high throughput between processing and persistent disks. 03:23 That’s the default, and it comes to you at no extra cost. 03:27 And finally, you’ll only pay for what you need with custom machine types. 03:33 Compute Engine lets you choose the machine properties of your instances, like the number of virtual CPUs and the 03:37 amount of memory, by using a set of predefined machine types or by creating your own custom machine types.

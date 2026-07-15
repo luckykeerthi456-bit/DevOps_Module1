@@ -1,0 +1,134 @@
+[
+    {
+        "timestamp": "00:00",
+        "text": "Earlier in the course, we explored infrastructure as a service, or IaaS."
+    },
+    {
+        "timestamp": "00:05",
+        "text": "Now let’s explore Google Cloud’s IaaS solution: Compute Engine."
+    },
+    {
+        "timestamp": "00:10",
+        "text": "With Compute Engine, users can create and run virtual machines on Google infrastructure."
+    },
+    {
+        "timestamp": "00:16",
+        "text": "There are no upfront investments, and thousands of virtual CPUs can run on a system that’s designed to be fast and to offer consistent performance."
+    },
+    {
+        "timestamp": "00:26",
+        "text": "Each virtual machine contains the power and functionality of a full-fledged operating system."
+    },
+    {
+        "timestamp": "00:31",
+        "text": "This means a virtual machine can be configured much like a physical server: by specifying the amount"
+    },
+    {
+        "timestamp": "00:36",
+        "text": "of CPU power and memory needed, the amount and type of storage needed, and the operating system."
+    },
+    {
+        "timestamp": "00:44",
+        "text": "A virtual machine instance can be created via the Google Cloud console, which is a web-based"
+    },
+    {
+        "timestamp": "00:49",
+        "text": "tool to manage Google Cloud projects and resources, the Google Cloud CLI, or the Compute Engine API."
+    },
+    {
+        "timestamp": "00:57",
+        "text": "The instance can run Linux and Windows Server images provided by Google or any customized versions of these images."
+    },
+    {
+        "timestamp": "01:05",
+        "text": "You can also build and run images of other operating systems and flexibly reconfigure virtual machines."
+    },
+    {
+        "timestamp": "01:13",
+        "text": "A quick way to get started with Google Cloud is through the Cloud Marketplace, which offers solutions from both Google and third-party vendors."
+    },
+    {
+        "timestamp": "01:21",
+        "text": "With these solutions, there’s no need to manually configure the software, virtual machine instances, storage, or network settings, although many of them can be modified before launch if that’s required."
+    },
+    {
+        "timestamp": "01:32",
+        "text": "Most software packages in Cloud Marketplace are available at no additional charge beyond the normal usage fees for Google Cloud resources."
+    },
+    {
+        "timestamp": "01:40",
+        "text": "Some Cloud Marketplace images charge usage fees, particularly those published by third parties with commercially licensed software, but they all show estimates of their monthly charges before they’re launched."
+    },
+    {
+        "timestamp": "01:53",
+        "text": "At this point, you might be wondering about Compute Engine’s pricing and billing structure."
+    },
+    {
+        "timestamp": "01:58",
+        "text": "For the use of virtual machines, Compute Engine bills by the second with a one-minute minimum, and sustained-use discounts start to apply automatically to virtual machines the longer they run."
+    },
+    {
+        "timestamp": "02:10",
+        "text": "So, for each VM that runs for more than 25% of a month, Compute Engine automatically applies a discount for every additional minute."
+    },
+    {
+        "timestamp": "02:18",
+        "text": "Compute Engine also offers committed-use discounts."
+    },
+    {
+        "timestamp": "02:21",
+        "text": "This means that for stable and predictable workloads, a specific amount of vCPUs and memory can be purchased for up to"
+    },
+    {
+        "timestamp": "02:28",
+        "text": "a 57% discount off of normal prices in return for committing to a usage term of one year or three years."
+    },
+    {
+        "timestamp": "02:37",
+        "text": "Then there are Spot VMs."
+    },
+    {
+        "timestamp": "02:39",
+        "text": "These are perfect for workloads that don't require immediate human oversight— like a batch job analyzing a large dataset."
+    },
+    {
+        "timestamp": "02:46",
+        "text": "By opting for Spot VMs, you can save up to 90% compared to standard pricing."
+    },
+    {
+        "timestamp": "02:51",
+        "text": "Unlike the older 'Preemptible' model, Spot VMs have no maximum runtime; they can run as long as the capacity is available."
+    },
+    {
+        "timestamp": "03:00",
+        "text": "The primary trade-off is that Google Cloud reserves the right to terminate the instance if those resources are needed elsewhere."
+    },
+    {
+        "timestamp": "03:07",
+        "text": "While the savings are significant, you must ensure your workload is designed to be stopped and restarted without losing progress."
+    },
+    {
+        "timestamp": "03:15",
+        "text": "In terms of storage, Compute Engine doesn’t require a particular option or machine type to get high throughput between processing and persistent disks."
+    },
+    {
+        "timestamp": "03:23",
+        "text": "That’s the default, and it comes to you at no extra cost."
+    },
+    {
+        "timestamp": "03:27",
+        "text": "And finally, you’ll only pay for what you need with custom machine types."
+    },
+    {
+        "timestamp": "03:33",
+        "text": "Compute Engine lets you choose the machine properties of your instances, like the number of virtual CPUs and the"
+    },
+    {
+        "timestamp": "03:37",
+        "text": "amount of memory, by using a set of predefined machine types or by creating your own custom machine types."
+    },
+    {
+        "timestamp": "00:00",
+        "text": "Earlier in the course, we explored infrastructure as a service, or IaaS. 00:05 Now let’s explore Google Cloud’s IaaS solution: Compute Engine. 00:10 With Compute Engine, users can create and run virtual machines on Google infrastructure. 00:16 There are no upfront investments, and thousands of virtual CPUs can run on a system that’s designed to be fast and to offer consistent performance. 00:26 Each virtual machine contains the power and functionality of a full-fledged operating system. 00:31 This means a virtual machine can be configured much like a physical server: by specifying the amount 00:36 of CPU power and memory needed, the amount and type of storage needed, and the operating system. 00:44 A virtual machine instance can be created via the Google Cloud console, which is a web-based 00:49 tool to manage Google Cloud projects and resources, the Google Cloud CLI, or the Compute Engine API. 00:57 The instance can run Linux and Windows Server images provided by Google or any customized versions of these images. 01:05 You can also build and run images of other operating systems and flexibly reconfigure virtual machines. 01:13 A quick way to get started with Google Cloud is through the Cloud Marketplace, which offers solutions from both Google and third-party vendors. 01:21 With these solutions, there’s no need to manually configure the software, virtual machine instances, storage, or network settings, although many of them can be modified before launch if that’s required. 01:32 Most software packages in Cloud Marketplace are available at no additional charge beyond the normal usage fees for Google Cloud resources. 01:40 Some Cloud Marketplace images charge usage fees, particularly those published by third parties with commercially licensed software, but they all show estimates of their monthly charges before they’re launched. 01:53 At this point, you might be wondering about Compute Engine’s pricing and billing structure. 01:58 For the use of virtual machines, Compute Engine bills by the second with a one-minute minimum, and sustained-use discounts start to apply automatically to virtual machines the longer they run. 02:10 So, for each VM that runs for more than 25% of a month, Compute Engine automatically applies a discount for every additional minute. 02:18 Compute Engine also offers committed-use discounts. 02:21 This means that for stable and predictable workloads, a specific amount of vCPUs and memory can be purchased for up to 02:28 a 57% discount off of normal prices in return for committing to a usage term of one year or three years. 02:37 Then there are Spot VMs. 02:39 These are perfect for workloads that don't require immediate human oversight— like a batch job analyzing a large dataset. 02:46 By opting for Spot VMs, you can save up to 90% compared to standard pricing. 02:51 Unlike the older 'Preemptible' model, Spot VMs have no maximum runtime; they can run as long as the capacity is available. 03:00 The primary trade-off is that Google Cloud reserves the right to terminate the instance if those resources are needed elsewhere. 03:07 While the savings are significant, you must ensure your workload is designed to be stopped and restarted without losing progress. 03:15 In terms of storage, Compute Engine doesn’t require a particular option or machine type to get high throughput between processing and persistent disks. 03:23 That’s the default, and it comes to you at no extra cost. 03:27 And finally, you’ll only pay for what you need with custom machine types. 03:33 Compute Engine lets you choose the machine properties of your instances, like the number of virtual CPUs and the 03:37 amount of memory, by using a set of predefined machine types or by creating your own custom machine types."
+    }
+]
